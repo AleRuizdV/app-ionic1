@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Proyect String</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -16,13 +16,26 @@
       <div id="container">
         <strong>Ready to create an app?</strong>
         <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+        <ion-chip>Default</ion-chip>
+        <ion-chip :disabled="true">Disabled</ion-chip>
+        <ion-chip :outline="true">Outline</ion-chip>
+
+        <p>Texto "p"</p>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { 
+  IonContent, 
+  IonHeader, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar,
+  IonChip 
+  } from '@ionic/vue';
 </script>
 
 <style scoped>
