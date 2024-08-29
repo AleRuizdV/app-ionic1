@@ -1,0 +1,7 @@
+{
+  "name": "stride-home",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
