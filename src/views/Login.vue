@@ -19,9 +19,9 @@
         </ion-card-header>
         <ion-card-content>
           <ion-item>
-            <ion-input label="mail" value="nombre@mail.com"></ion-input>
+            <ion-input label="Mail"></ion-input>
           </ion-item>
-          <ion-input type="password" label="Password" value="Contraseña">
+          <ion-input type="password" label="Password">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
           <ion-button>Log In</ion-button>
