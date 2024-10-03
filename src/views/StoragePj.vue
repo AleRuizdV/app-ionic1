@@ -17,26 +17,20 @@
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
       </ion-header>
-      
-      <!-- Carta a Libreria --> <ion-card href="/storage">
-        <img alt="Silhouette of mountains" src="https://images.ctfassets.net/0piqveu8x9oj/7xkbfuRW3hWVoneQ13sI94/f97f0e8982c6ef35a71eeeea42f9d6a1/Articles_Header_Image_w07_2.jpg" />
+
+      <!-- Personaje Test --> <ion-card class="carta_personaje" href="/PagPjTest">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
         <ion-card-header>
-          <ion-card-title>Libreria de personajes</ion-card-title>
+          <ion-card-title>Personaje</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
-          Crea y guarda tu personajes aquí.
+          Here's a small text description for the card content. Nothing more, nothing less.
         </ion-card-content>
       </ion-card>
 
     </ion-content>
-    <ion-footer>
-      <ion-toolbar>
-        <ion-card-content>
-          Proyect String ® 2024
-        </ion-card-content>
-      </ion-toolbar>
-    </ion-footer>
   </ion-page>
 </template>
 
@@ -56,13 +50,16 @@ import {
   IonCardSubtitle, 
   IonCardTitle,
   // Componentes Avatar
-  IonAvatar,
-  // Componente footer
-  IonFooter
+  IonAvatar
   } from '@ionic/vue';
 </script>
 
 <style scoped>
+  #carta_personaje{
+    /* Tratando de hacer que dos cartas se vean en la misma fila
+    */
+    flex-basis: 45%;
+    }
   #container {
     text-align: center;
     position: absolute;

@@ -17,18 +17,41 @@
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
       </ion-header>
+
+      <!-- Configuración Personaje --> <div class="ConfigPJ"> 
+        <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
+          Personaje 1 V.1
+        </ion-button>
+        <!-- Editar --> <ion-button shape="round"> 
+          <ion-icon slot="icon-only" :icon="heart">
+        </ion-icon></ion-button>
+        <!-- Exportar --> <ion-button shape="round"> 
+          <ion-icon slot="icon-only" :icon="heart">
+        </ion-icon></ion-button>
+      </div>
+
+      <!-- Info Personaje --> <div>
+        <!-- Card 1 --><ion-card class="carta_changeVersion">
+          <ion-card-header>
+            <ion-card-title>Introducción | Historia | Stats | Updates</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Card 2 --><ion-card class="carta_Stay">
+          <ion-card-header>
+            <ion-card-title>Curiosidades | Galería</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </div>
       
-      <!-- Carta a Libreria --> <ion-card href="/storage">
-        <img alt="Silhouette of mountains" src="https://images.ctfassets.net/0piqveu8x9oj/7xkbfuRW3hWVoneQ13sI94/f97f0e8982c6ef35a71eeeea42f9d6a1/Articles_Header_Image_w07_2.jpg" />
-        <ion-card-header>
-          <ion-card-title>Libreria de personajes</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          Crea y guarda tu personajes aquí.
-        </ion-card-content>
-      </ion-card>
-
     </ion-content>
     <ion-footer>
       <ion-toolbar>
@@ -58,8 +81,12 @@ import {
   // Componentes Avatar
   IonAvatar,
   // Componente footer
-  IonFooter
+  IonFooter,
+  // Button
+  IonButton, 
+  IonIcon
   } from '@ionic/vue';
+import { heart } from 'ionicons/icons';
 </script>
 
 <style scoped>
@@ -83,5 +110,8 @@ import {
     }
     #container a {
     text-decoration: none;
+    }
+  #ConfigPJ{
+    padding-top: 100px;
     }
 </style>
