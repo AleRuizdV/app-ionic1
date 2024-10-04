@@ -28,6 +28,8 @@
           Crea y guarda tu personajes aquí.
         </ion-card-content>
       </ion-card>
+      <!-- Link a "Log In" temporal-->
+      <ion-button href="/Login">Log In (temporal passage)</ion-button>
 
     </ion-content>
     <ion-footer>
@@ -58,7 +60,9 @@ import {
   // Componentes Avatar
   IonAvatar,
   // Componente footer
-  IonFooter
+  IonFooter,
+  // Button
+  IonButton
   } from '@ionic/vue';
 </script>
 
