@@ -33,17 +33,42 @@
       <!-- Info Personaje --> <div>
         <!-- Card 1 --><ion-card class="carta_changeVersion">
           <ion-card-header>
-            <ion-card-title>Introducción | Historia | Stats | Updates</ion-card-title>
+            <ion-segment value="buttonsCard1">
+              <ion-segment-button value="Card1_Int">
+                <ion-label>Introducción</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Card1_His">
+                <ion-label>Historia</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Card1_Sta">
+                <ion-label>Stats & Habilities</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Card1_Upd">
+                <ion-label>Updates</ion-label>
+              </ion-segment-button>
+            </ion-segment>
           </ion-card-header>
 
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            <div value="Card1_Int">
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </div>
+            <div value="Card1_His">
+              Hi.
+            </div>
           </ion-card-content>
         </ion-card>
 
         <!-- Card 2 --><ion-card class="carta_Stay">
           <ion-card-header>
-            <ion-card-title>Curiosidades | Galería</ion-card-title>
+            <ion-segment value="buttonsCard2">
+              <ion-segment-button value="Card2_Cur">
+                <ion-label>Curiosidades</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Card2_Gal">
+                <ion-label>Galería</ion-label>
+              </ion-segment-button>
+            </ion-segment>
           </ion-card-header>
 
           <ion-card-content>
@@ -84,7 +109,11 @@ import {
   IonFooter,
   // Button
   IonButton, 
-  IonIcon
+  IonIcon,
+  // Segment Button
+  IonLabel, 
+  IonSegment, 
+  IonSegmentButton
   } from '@ionic/vue';
 import { heart } from 'ionicons/icons';
 </script>
