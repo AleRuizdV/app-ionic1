@@ -32,8 +32,9 @@
 
       <!-- Info Personaje --> <div>
         <!-- Card 1 --><ion-card class="carta_changeVersion">
+          <!-- Segments-buttons for change content -->
           <ion-card-header>
-            <ion-segment value="buttonsCard1">
+            <ion-segment v-model="buttonsCard1">
               <ion-segment-button value="Card1_Int">
                 <ion-label>Introducción</ion-label>
               </ion-segment-button>
@@ -50,18 +51,25 @@
           </ion-card-header>
 
           <ion-card-content>
-            <div value="Card1_Int">
-              Here's a small text description for the card content. Nothing more, nothing less.
+            <div v-if="buttonsCard1 === 'Card1_Int'">
+              1 (Text & Cuadro wiki)
             </div>
-            <div value="Card1_His">
-              Hi.
+            <div v-if="buttonsCard1 === 'Card1_His'">
+              2 (Text - Imagenes)
+            </div>
+            <div v-if="buttonsCard1 === 'Card1_Sta'">
+              3 (D&D)
+            </div>
+            <div v-if="buttonsCard1 === 'Card1_Upd'">
+              4 (Text)
             </div>
           </ion-card-content>
         </ion-card>
 
         <!-- Card 2 --><ion-card class="carta_Stay">
+          <!-- Segments-buttons for change content -->
           <ion-card-header>
-            <ion-segment value="buttonsCard2">
+            <ion-segment v-model="buttonsCard2">
               <ion-segment-button value="Card2_Cur">
                 <ion-label>Curiosidades</ion-label>
               </ion-segment-button>
@@ -72,7 +80,12 @@
           </ion-card-header>
 
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            <div v-if="buttonsCard2 === 'Card2_Cur'">
+              1 (Text)
+            </div>
+            <div v-if="buttonsCard2 === 'Card2_Gal'">
+              2 (Imagenes)
+            </div>
           </ion-card-content>
         </ion-card>
       </div>
@@ -89,33 +102,37 @@
 </template>
 
 <script setup lang="ts">
-import { 
-  // Componente Base
-  IonContent, 
-  IonHeader, 
-  IonPage, 
-  IonTitle, 
-  IonToolbar,
-  IonChip,
-  // Componentes Cartas
-  IonCard, 
-  IonCardContent, 
-  IonCardHeader, 
-  IonCardSubtitle, 
-  IonCardTitle,
-  // Componentes Avatar
-  IonAvatar,
-  // Componente footer
-  IonFooter,
-  // Button
-  IonButton, 
-  IonIcon,
-  // Segment Button
-  IonLabel, 
-  IonSegment, 
-  IonSegmentButton
-  } from '@ionic/vue';
-import { heart } from 'ionicons/icons';
+  import { 
+    // Componente Base
+    IonContent, 
+    IonHeader, 
+    IonPage, 
+    IonTitle, 
+    IonToolbar,
+    IonChip,
+    // Componentes Cartas
+    IonCard, 
+    IonCardContent, 
+    IonCardHeader, 
+    IonCardSubtitle, 
+    IonCardTitle,
+    // Componentes Avatar
+    IonAvatar,
+    // Componente footer
+    IonFooter,
+    // Button
+    IonButton, 
+    IonIcon,
+    // Segment Button
+    IonLabel, 
+    IonSegment, 
+    IonSegmentButton
+    } from '@ionic/vue';
+  import { ref } from 'vue';
+  import { heart } from 'ionicons/icons';
+
+  const buttonsCard1 = ref('1');
+  const buttonsCard2 = ref('1');
 </script>
 
 <style scoped>
