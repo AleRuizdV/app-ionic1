@@ -56,8 +56,8 @@
               <ion-segment-button value="Card1_Sta">
                 <ion-label>Stats & Habilities</ion-label>
               </ion-segment-button>
-              <ion-segment-button value="Card1_Upd">
-                <ion-label>Updates</ion-label>
+              <ion-segment-button value="Card1_Inv">
+                <ion-label>Inventario</ion-label>
               </ion-segment-button>
             </ion-segment>
           </ion-card-header>
@@ -72,8 +72,8 @@
             <div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
             </div>
-            <div v-if="buttonsCard1 === 'Card1_Upd'">
-              4 (Text)
+            <div v-if="buttonsCard1 === 'Card1_Inv'">
+              4 (D&D)
             </div>
           </ion-card-content>
         </ion-card>
@@ -88,6 +88,9 @@
               <ion-segment-button value="Card2_Gal">
                 <ion-label>Galería</ion-label>
               </ion-segment-button>
+              <ion-segment-button value="Card2_Upd">
+                <ion-label>Updates</ion-label>
+              </ion-segment-button>
             </ion-segment>
           </ion-card-header>
 
@@ -97,6 +100,9 @@
             </div>
             <div v-if="buttonsCard2 === 'Card2_Gal'">
               2 (Imagenes)
+            </div>
+            <div v-if="buttonsCard2 === 'Card2_Upd'">
+              3 (Text)
             </div>
           </ion-card-content>
         </ion-card>
