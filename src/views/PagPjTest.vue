@@ -73,12 +73,16 @@
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>Personaje</ion-card-title>
-                      <!-- Agregar Label de Imagenes-->
                     </ion-card-header>
+                    <!-- Agregar Label de Imagenes
+                    <ion-card-header>
+                      <ion-card-title>Labels</ion-card-title>
+                    </ion-card-header>
+                    -->
                     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                     <ion-card-header>
                       <ion-card-title>Nombres</ion-card-title>
-                    </ion-card-header>
+                    </ion-card-header>                    
                     <ion-card-content>
                       <ion-row>
                         <!-- Text -->
