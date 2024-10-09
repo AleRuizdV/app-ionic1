@@ -64,12 +64,24 @@
 
           <ion-card-content>
             <div v-if="buttonsCard1 === 'Card1_Int'">
-              1 (Text & Cuadro wiki)
+              <!-- Objetivo: 1 (Text & Cuadro wiki)-->
               <ion-row>
-                <!-- Text -->
-                <ion-col>1</ion-col>
+                <!-- Columna 1 --><ion-col>
+                  <!-- Frase --><ion-card>
+                    <ion-card-content>
+                      «...»
+                    </ion-card-content>
+                    <ion-card-header>
+                      <ion-card-subtitle>— Name </ion-card-subtitle>
+                    </ion-card-header>
+                  </ion-card>
+
+                  <!-- Texto Introductorio --><ion-card-content>
+                    ...
+                  </ion-card-content>
+                </ion-col>
                 <!-- Wiki -->
-                <ion-col>2
+                <!-- Columna 2 --><ion-col>
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>Personaje</ion-card-title>
@@ -143,6 +155,14 @@
                   </ion-card>
                 </ion-col>
               </ion-row>
+              <!-- More Text -->
+              Index <!-- Agregar Index -->
+              <ion-card-header>
+                <ion-card-title>Sumario</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                ...
+              </ion-card-content>
             </div>
             <div v-if="buttonsCard1 === 'Card1_His'">
               2 (Text - Imagenes)
