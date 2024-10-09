@@ -9,6 +9,14 @@
         </ion-avatar>
         -->
       </ion-toolbar>
+      <ion-toolbar>
+        <ion-breadcrumbs>
+          <ion-breadcrumb href="/home">
+            <ion-icon slot="start" :icon="home"></ion-icon>
+            Home
+          </ion-breadcrumb>
+        </ion-breadcrumbs>
+      </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
@@ -35,23 +43,29 @@
 </template>
 
 <script setup lang="ts">
-import { 
-  // Componente Base
-  IonContent, 
-  IonHeader, 
-  IonPage, 
-  IonTitle, 
-  IonToolbar,
-  IonChip,
-  // Componentes Cartas
-  IonCard, 
-  IonCardContent, 
-  IonCardHeader, 
-  IonCardSubtitle, 
-  IonCardTitle,
-  // Componentes Avatar
-  IonAvatar
+  import { 
+    // Componente Base
+    IonContent, 
+    IonHeader, 
+    IonPage, 
+    IonTitle, 
+    IonToolbar,
+    IonChip,
+    // Componentes Cartas
+    IonCard, 
+    IonCardContent, 
+    IonCardHeader, 
+    IonCardSubtitle, 
+    IonCardTitle,
+    // Componentes Avatar
+    IonAvatar,
+    // Componentes Breadcrumbs
+    IonBreadcrumb, 
+    IonBreadcrumbs, 
+    IonIcon, 
+    IonLabel
   } from '@ionic/vue';
+  import { home } from 'ionicons/icons';
 </script>
 
 <style scoped>

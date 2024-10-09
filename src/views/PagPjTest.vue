@@ -9,6 +9,18 @@
         </ion-avatar>
         -->
       </ion-toolbar>
+      <ion-toolbar>
+        <ion-breadcrumbs>
+          <ion-breadcrumb href="/home">
+            <ion-icon slot="start" :icon="home"></ion-icon>
+            Home
+          </ion-breadcrumb>
+          <ion-breadcrumb href="/storage">
+            <ion-icon slot="start" :icon="film"></ion-icon>
+            Biblioteca
+          </ion-breadcrumb>
+        </ion-breadcrumbs>
+      </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
@@ -129,7 +141,7 @@
     IonSegmentButton
     } from '@ionic/vue';
   import { ref } from 'vue';
-  import { heart } from 'ionicons/icons';
+  import { heart, home, film } from 'ionicons/icons';
 
   const buttonsCard1 = ref('1');
   const buttonsCard2 = ref('1');
