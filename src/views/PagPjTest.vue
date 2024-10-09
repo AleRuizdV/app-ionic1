@@ -66,8 +66,78 @@
             <div v-if="buttonsCard1 === 'Card1_Int'">
               1 (Text & Cuadro wiki)
               <ion-row>
+                <!-- Text -->
                 <ion-col>1</ion-col>
-                <ion-col>2</ion-col>
+                <!-- Wiki -->
+                <ion-col>2
+                  <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>Personaje</ion-card-title>
+                      <!-- Agregar Label de Imagenes-->
+                    </ion-card-header>
+                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                    <ion-card-header>
+                      <ion-card-title>Nombres</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Text</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                    </ion-card-content>
+                    <ion-card-header>
+                      <ion-card-title>Datos</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Genero</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Nacimiento</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Defunción</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Edad</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Especie</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Ocupación</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Procedencia</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Familiares</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <!-- Text -->
+                        <ion-col>Afiliados</ion-col>
+                        <ion-col>Response</ion-col>
+                      </ion-row>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-col>
               </ion-row>
             </div>
             <div v-if="buttonsCard1 === 'Card1_His'">
