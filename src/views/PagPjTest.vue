@@ -65,6 +65,10 @@
           <ion-card-content>
             <div v-if="buttonsCard1 === 'Card1_Int'">
               1 (Text & Cuadro wiki)
+              <ion-row>
+                <ion-col>1</ion-col>
+                <ion-col>2</ion-col>
+              </ion-row>
             </div>
             <div v-if="buttonsCard1 === 'Card1_His'">
               2 (Text - Imagenes)
@@ -144,7 +148,11 @@
     // Segment Button
     IonLabel, 
     IonSegment, 
-    IonSegmentButton
+    IonSegmentButton,
+    // Grid
+    IonCol, 
+    IonGrid, 
+    IonRow
     } from '@ionic/vue';
   import { ref } from 'vue';
   import { heart, home, film } from 'ionicons/icons';
