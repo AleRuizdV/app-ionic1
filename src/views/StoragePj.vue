@@ -9,7 +9,7 @@
         </ion-avatar>
         -->
       </ion-toolbar>
-      <ion-toolbar>
+      <!-- Breadcrumbs --><ion-toolbar>
         <ion-breadcrumbs>
           <ion-breadcrumb href="/home">
             <ion-icon slot="start" :icon="home"></ion-icon>
@@ -39,6 +39,13 @@
       </ion-card>
 
     </ion-content>
+    <!-- Fotter --><ion-footer>
+      <ion-toolbar>
+        <ion-card-content>
+          Proyect String ® 2024
+        </ion-card-content>
+      </ion-toolbar>
+    </ion-footer>
   </ion-page>
 </template>
 

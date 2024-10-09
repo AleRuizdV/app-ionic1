@@ -9,7 +9,7 @@
         </ion-avatar>
         -->
       </ion-toolbar>
-      <ion-toolbar>
+      <!-- Breadcrumbs --><ion-toolbar>
         <ion-breadcrumbs>
           <ion-breadcrumb href="/home">
             <ion-icon slot="start" :icon="home"></ion-icon>
@@ -46,8 +46,8 @@
         <!-- Card 1 --><ion-card class="carta_changeVersion">
           <!-- Segments-buttons for change content -->
           <ion-card-header>
-            <ion-segment v-model="buttonsCard1">
-              <ion-segment-button value="Card1_Int">
+            <ion-segment v-model="buttonsCard1" >
+              <ion-segment-button value="Card1_Int" >
                 <ion-label>Introducción</ion-label>
               </ion-segment-button>
               <ion-segment-button value="Card1_His">
@@ -103,7 +103,7 @@
       </div>
       
     </ion-content>
-    <ion-footer>
+    <!-- Fotter --><ion-footer>
       <ion-toolbar>
         <ion-card-content>
           Proyect String ® 2024
