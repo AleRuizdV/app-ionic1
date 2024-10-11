@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <!-- Header --><ion-header :translucent="true">
       <ion-toolbar class="ion-padding-end">
         <ion-title>Proyect String</ion-title>
         <!--
@@ -23,14 +23,15 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <!-- Body --><ion-content :fullscreen="true">
+      <!-- ... --><ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
       </ion-header>
-
-      <!-- Configuración Personaje --> <div class="ConfigPJ"> 
+      <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      
+      <!-- Configuración Personaje --><div class="ConfigPJ"> 
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
           Personaje 1 V.1
         </ion-button>
@@ -42,10 +43,9 @@
         </ion-icon></ion-button>
       </div>
 
-      <!-- Info Personaje --> <div>
+      <!-- Info Personaje --><div>
         <!-- Card 1 --><ion-card class="carta_changeVersion">
-          <!-- Segments-buttons for change content -->
-          <ion-card-header>
+          <!-- Segments-buttons for change content --><ion-card-header>
             <ion-segment v-model="buttonsCard1" >
               <ion-segment-button value="Card1_Int" >
                 <ion-label>Introducción</ion-label>
@@ -62,11 +62,10 @@
             </ion-segment>
           </ion-card-header>
 
-          <ion-card-content>
-            <div v-if="buttonsCard1 === 'Card1_Int'">
-              <!-- Objetivo: 1 (Text & Cuadro wiki)-->
-              <ion-row>
-                <!-- Columna 1 --><ion-col>
+          <!-- Contenido--><ion-card-content>
+            <!-- Introducción--><div v-if="buttonsCard1 === 'Card1_Int'">
+              <!-- Part 1: Text & Cuadro wiki--><ion-row>
+                <!-- Columna 1: Text --><ion-col>
                   <!-- Frase --><ion-card>
                     <ion-card-content>
                       «...»
@@ -80,74 +79,72 @@
                     ...
                   </ion-card-content>
                 </ion-col>
-                <!-- Wiki -->
-                <!-- Columna 2 --><ion-col>
+                <!--  -->
+                <!-- Columna 2: Wiki --><ion-col>
                   <ion-card>
+                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+                    <!-- Wiki: Nombre de Personaje -->
                     <ion-card-header>
                       <ion-card-title>Personaje</ion-card-title>
                     </ion-card-header>
+                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+                    <!-- Wiki: Imagenes principales -->
                     <!-- Agregar Label de Imagenes
                     <ion-card-header>
                       <ion-card-title>Labels</ion-card-title>
                     </ion-card-header>
                     -->
                     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+                    <!-- Wiki: Nombres y apodos -->
                     <ion-card-header>
                       <ion-card-title>Nombres</ion-card-title>
                     </ion-card-header>                    
                     <ion-card-content>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row> <!-- Modify: Text -->
                         <ion-col>Text</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                     </ion-card-content>
+                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+                    <!-- Wiki: Datos personales de Personaje -->
                     <ion-card-header>
                       <ion-card-title>Datos</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Genero</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Nacimiento</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Defunción</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Edad</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Especie</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Ocupación</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Procedencia</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Familiares</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row>
-                        <!-- Text -->
+                      <ion-row><!-- Modify: Text -->
                         <ion-col>Afiliados</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
@@ -155,30 +152,33 @@
                   </ion-card>
                 </ion-col>
               </ion-row>
-              <!-- More Text -->
-              Index <!-- Agregar Index -->
-              <ion-card-header>
-                <ion-card-title>Sumario</ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-                ...
-              </ion-card-content>
+              <!-- Part 2.1: Index of Part 2.2--><div>
+                Index <!-- Agregar Index -->
+              </div>
+              <!-- Part 2.2: More Text--><div>
+                <ion-card-header>
+                  <ion-card-title>Sumario</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  ...
+                </ion-card-content>
+              </div>
+              
             </div>
-            <div v-if="buttonsCard1 === 'Card1_His'">
+            <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
               2 (Text - Imagenes)
             </div>
-            <div v-if="buttonsCard1 === 'Card1_Sta'">
+            <!-- Stats & Habilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
             </div>
-            <div v-if="buttonsCard1 === 'Card1_Inv'">
+            <!-- Inventario--><div v-if="buttonsCard1 === 'Card1_Inv'">
               4 (D&D)
             </div>
           </ion-card-content>
         </ion-card>
-
+        <!-- _________________________________________________________________________________________ -->
         <!-- Card 2 --><ion-card class="carta_Stay">
-          <!-- Segments-buttons for change content -->
-          <ion-card-header>
+          <!-- Segments-buttons for change content --><ion-card-header>
             <ion-segment v-model="buttonsCard2">
               <ion-segment-button value="Card2_Cur">
                 <ion-label>Curiosidades</ion-label>
@@ -192,14 +192,14 @@
             </ion-segment>
           </ion-card-header>
 
-          <ion-card-content>
-            <div v-if="buttonsCard2 === 'Card2_Cur'">
+          <!-- Contenido--><ion-card-content>
+            <!-- Curiosidades--><div v-if="buttonsCard2 === 'Card2_Cur'">
               1 (Text)
             </div>
-            <div v-if="buttonsCard2 === 'Card2_Gal'">
+            <!-- Galería--><div v-if="buttonsCard2 === 'Card2_Gal'">
               2 (Imagenes)
             </div>
-            <div v-if="buttonsCard2 === 'Card2_Upd'">
+            <!-- Updates--><div v-if="buttonsCard2 === 'Card2_Upd'">
               3 (Text)
             </div>
           </ion-card-content>
@@ -207,6 +207,7 @@
       </div>
       
     </ion-content>
+    
     <!-- Fotter --><ion-footer>
       <ion-toolbar>
         <ion-card-content>
@@ -218,28 +219,28 @@
 </template>
 
 <script setup lang="ts">
-  import { 
-    // Componente Base
+  import { // Componentes
+    // Base
     IonContent, 
     IonHeader, 
     IonPage, 
     IonTitle, 
     IonToolbar,
     IonChip,
-    // Componentes Cartas
+    // Cartas
     IonCard, 
     IonCardContent, 
     IonCardHeader, 
     IonCardSubtitle, 
     IonCardTitle,
-    // Componentes Avatar
+    // Avatar
     IonAvatar,
-    // Componente footer
+    // Footer
     IonFooter,
     // Button
     IonButton, 
     IonIcon,
-    // Segment Button
+    // Button
     IonLabel, 
     IonSegment, 
     IonSegmentButton,
@@ -248,9 +249,16 @@
     IonGrid, 
     IonRow
     } from '@ionic/vue';
-  import { ref } from 'vue';
-  import { heart, home, film } from 'ionicons/icons';
-
+  import { // ...
+    ref 
+    } from 'vue';
+  import { // Iconos
+    heart, 
+    home, 
+    film 
+    } from 'ionicons/icons';
+  
+  // Labels of the cards
   const buttonsCard1 = ref('1');
   const buttonsCard2 = ref('1');
 </script>
