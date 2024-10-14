@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <!-- Header --><ion-header :translucent="true">
       <ion-toolbar class="ion-padding-end">
         <ion-title>Proyect String</ion-title>
         <!--
@@ -17,35 +17,39 @@
           </ion-breadcrumb>
         </ion-breadcrumbs>
       </ion-toolbar>
-    </ion-header>
+    </ion-header><!-- ................................................................................ -->
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <!-- Body --><ion-content :fullscreen="true">
+      <!-- ... --><ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
-      </ion-header>
+      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
-      <!-- Personaje Test --> <ion-card class="carta_personaje" href="/PagPjTest">
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-        <ion-card-header>
-          <ion-card-title>Personaje</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-
-    </ion-content>
+      <!-- Personaje Test --><ion-card class="carta_personaje" href="/PagPjTest">
+        <!-- Imagen Presentasión PJ --><div>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        </div>
+        <!-- Info Presentasión PJ --><div>
+          <ion-card-header>
+            <ion-card-title>Personaje</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </div>
+        
+      </ion-card><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    </ion-content><!-- ............................................................................... -->
+    
     <!-- Fotter --><ion-footer>
       <ion-toolbar>
         <ion-card-content>
           Proyect String ® 2024
         </ion-card-content>
       </ion-toolbar>
-    </ion-footer>
+    </ion-footer><!-- ................................................................................ -->
   </ion-page>
 </template>
 

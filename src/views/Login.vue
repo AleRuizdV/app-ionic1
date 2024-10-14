@@ -1,43 +1,48 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <!-- Header --><ion-header :translucent="true">
       <ion-toolbar>
         <ion-title>Proyect String</ion-title>
       </ion-toolbar>
-    </ion-header>
+    </ion-header><!-- ................................................................................ -->
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <!-- Body --><ion-content :fullscreen="true">
+      <!-- ... --><ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
-      </ion-header>
+      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
-      <ion-card>
-        <ion-card-header>
+      <!-- Carta Log In --><ion-card>
+        <!-- Titulo --><ion-card-header>
           <ion-card-title>Log In</ion-card-title>
         </ion-card-header>
-        <ion-card-content>
+        <!-- Casillas --><ion-card-content>
+          <!-- Inputs -->
           <ion-item>
             <ion-input label="Mail"></ion-input>
           </ion-item>
           <ion-input type="password" label="Password">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
+
+          <!-- Buttons -->
           <ion-button>Log In</ion-button>
           <ion-button>
             <ion-icon slot="start" :icon="star"></ion-icon> Access Google
           </ion-button>
+
         </ion-card-content>
-      </ion-card>
-    </ion-content>
-    <ion-footer>
+      </ion-card><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    </ion-content><!-- ............................................................................... -->
+
+    <!-- Fotter --><ion-footer>
       <ion-toolbar>
         <ion-card-content>
           Proyect String ® 2024
         </ion-card-content>
       </ion-toolbar>
-    </ion-footer>
+    </ion-footer><!-- ................................................................................ -->
   </ion-page>
 </template>
 

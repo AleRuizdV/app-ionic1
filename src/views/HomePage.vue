@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <!-- Header --><ion-header :translucent="true">
       <ion-toolbar class="ion-padding-end">
         <ion-title>Proyect String</ion-title>
         <!--
@@ -9,14 +9,14 @@
         </ion-avatar>
         -->
       </ion-toolbar>
-    </ion-header>
+    </ion-header><!-- ................................................................................ -->
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <!-- Body --><ion-content :fullscreen="true">
+      <!-- ... --><ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
-      </ion-header>
+      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       
       <!-- Carta a Libreria --> <ion-card href="/storage">
         <img alt="Silhouette of mountains" src="https://images.ctfassets.net/0piqveu8x9oj/7xkbfuRW3hWVoneQ13sI94/f97f0e8982c6ef35a71eeeea42f9d6a1/Articles_Header_Image_w07_2.jpg" />
@@ -27,18 +27,18 @@
         <ion-card-content>
           Crea y guarda tu personajes aquí.
         </ion-card-content>
-      </ion-card>
-      <!-- Link a "Log In" temporal-->
-      <ion-button href="/Login">Log In (temporal passage)</ion-button>
+      </ion-card><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      
+      <!-- Link a "Log In" temporal--><ion-button href="/Login">Log In (temporal passage)</ion-button>
+    </ion-content><!-- ............................................................................... -->
 
-    </ion-content>
-    <ion-footer>
+    <!-- Fotter --><ion-footer>
       <ion-toolbar>
         <ion-card-content>
           Proyect String ® 2024
         </ion-card-content>
       </ion-toolbar>
-    </ion-footer>
+    </ion-footer><!-- ................................................................................ -->
   </ion-page>
 </template>
 

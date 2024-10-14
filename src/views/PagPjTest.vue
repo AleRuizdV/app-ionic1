@@ -21,15 +21,14 @@
           </ion-breadcrumb>
         </ion-breadcrumbs>
       </ion-toolbar>
-    </ion-header>
+    </ion-header><!-- ................................................................................ -->
 
     <!-- Body --><ion-content :fullscreen="true">
       <!-- ... --><ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
-      </ion-header>
-      <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       
       <!-- Configuración Personaje --><div class="ConfigPJ"> 
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
@@ -41,7 +40,7 @@
         <!-- Exportar --> <ion-button shape="round"> 
           <ion-icon slot="icon-only" :icon="heart">
         </ion-icon></ion-button>
-      </div>
+      </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
       <!-- Info Personaje --><div>
         <!-- Card 1 --><ion-card class="carta_changeVersion">
@@ -204,9 +203,8 @@
             </div>
           </ion-card-content>
         </ion-card>
-      </div>
-      
-    </ion-content>
+      </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    </ion-content><!-- ............................................................................... -->
     
     <!-- Fotter --><ion-footer>
       <ion-toolbar>
@@ -214,7 +212,7 @@
           Proyect String ® 2024
         </ion-card-content>
       </ion-toolbar>
-    </ion-footer>
+    </ion-footer><!-- ................................................................................ -->
   </ion-page>
 </template>
 
