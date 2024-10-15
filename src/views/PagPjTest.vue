@@ -171,7 +171,6 @@
               3 (D&D)
               <!-- Stats --><ion-accordion-group>
                 <ion-accordion value="first">
-
                   <!-- Nombre lista --><ion-item slot="header">
                     <ion-card-title>Stats</ion-card-title>
                   </ion-item>
