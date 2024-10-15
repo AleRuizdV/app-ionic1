@@ -169,6 +169,73 @@
             </div>
             <!-- Stats & Habilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
+              <!-- Stats --><ion-accordion-group>
+                <ion-accordion value="first">
+
+                  <!-- Nombre lista --><ion-item slot="header">
+                    <ion-card-title>Stats</ion-card-title>
+                  </ion-item>
+
+                  <!-- Info Stats --><div class="ion-padding" slot="content">
+                    <ion-card-content>
+                      <!-- Str | Dex | Con --><ion-row>
+                        <!-- 1. Str --><ion-col>
+                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <ion-card style="border: 2px solid red; padding: 5px;">
+                              <!-- Titulo --><ion-card-header>str</ion-card-header>
+                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                            </ion-card>
+                          </div>
+                        </ion-col>
+                        <!-- 2. Dex --><ion-col>
+                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <ion-card style="border: 2px solid red; padding: 5px;">
+                              <!-- Titulo --><ion-card-header>dex</ion-card-header>
+                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                            </ion-card>
+                          </div>
+                        </ion-col>
+                        <!-- 3. Con --><ion-col>
+                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <ion-card style="border: 2px solid red; padding: 5px;">
+                              <!-- Titulo --><ion-card-header>con</ion-card-header>
+                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                            </ion-card>
+                          </div>
+                        </ion-col>
+                      </ion-row>
+                      <!-- Int | Wis | Cha --><ion-row>
+                        <!-- 4. Int --><ion-col>
+                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <ion-card style="border: 2px solid red; padding: 5px;">
+                              <!-- Titulo --><ion-card-header>int</ion-card-header>
+                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                            </ion-card>
+                          </div>
+                        </ion-col>
+                        <!-- 5. Wis --><ion-col>
+                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <ion-card style="border: 2px solid red; padding: 5px;">
+                              <!-- Titulo --><ion-card-header>wis</ion-card-header>
+                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                            </ion-card>
+                          </div>
+                        </ion-col>
+                        <!-- 6. Cha --><ion-col>
+                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <ion-card style="border: 2px solid red; padding: 5px;">
+                              <!-- Titulo --><ion-card-header>cha</ion-card-header>
+                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                            </ion-card>
+                          </div>
+                        </ion-col>
+                      </ion-row>
+                    </ion-card-content>
+                  </div>
+                  
+                </ion-accordion>
+              </ion-accordion-group>
+              
             </div>
             <!-- Inventario--><div v-if="buttonsCard1 === 'Card1_Inv'">
               4 (D&D)
@@ -196,7 +263,16 @@
               1 (Text)
             </div>
             <!-- Galería--><div v-if="buttonsCard2 === 'Card2_Gal'">
-              2 (Imagenes)
+              <ion-row>
+                <ion-col>
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                </ion-col>
+                <ion-col>
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                </ion-col>
+              </ion-row>
             </div>
             <!-- Updates--><div v-if="buttonsCard2 === 'Card2_Upd'">
               3 (Text)
@@ -245,7 +321,11 @@
     // Grid
     IonCol, 
     IonGrid, 
-    IonRow
+    IonRow,
+    // Acordion
+    IonAccordion, 
+    IonAccordionGroup, 
+    IonItem
     } from '@ionic/vue';
   import { // ...
     ref 
