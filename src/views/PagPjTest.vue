@@ -66,16 +66,14 @@
               <!-- Part 1: Text & Cuadro wiki--><ion-row>
                 <!-- Columna 1: Text --><ion-col>
                   <!-- Frase --><ion-card>
-                    <ion-card-content>
-                      «...»
-                    </ion-card-content>
+                    <ion-card-content>{{ inputTextFrase1 }}</ion-card-content>
                     <ion-card-header>
-                      <ion-card-subtitle>— Name </ion-card-subtitle>
+                      <ion-card-subtitle>— {{ inputTextFrase2 }} </ion-card-subtitle>
                     </ion-card-header>
                   </ion-card>
 
                   <!-- Texto Introductorio --><ion-card-content>
-                    ...
+                    {{ inputTextIntroductorio }}
                   </ion-card-content>
                 </ion-col>
                 <!--  -->
@@ -83,8 +81,7 @@
                   <ion-card>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombre de Personaje -->
-                    <ion-card-header>
-                      <ion-card-title>Personaje</ion-card-title>
+                    <ion-card-header><ion-card-title>Personaje</ion-card-title>
                     </ion-card-header>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Imagenes principales -->
@@ -96,54 +93,52 @@
                     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombres y apodos -->
-                    <ion-card-header>
-                      <ion-card-title>Nombres</ion-card-title>
+                    <ion-card-header><ion-card-title>Nombres</ion-card-title>
                     </ion-card-header>                    
-                    <ion-card-content>
-                      <ion-row> <!-- Modify: Text -->
+                    <!-- Modify: Text --><ion-card-content>
+                      <ion-row><!-- Apodos -->
                         <ion-col>Text</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                     </ion-card-content>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Datos personales de Personaje -->
-                    <ion-card-header>
-                      <ion-card-title>Datos</ion-card-title>
+                    <ion-card-header><ion-card-title>Datos</ion-card-title>
                     </ion-card-header>
-                    <ion-card-content>
-                      <ion-row><!-- Modify: Text -->
+                    <!-- Modify: Text --><ion-card-content>
+                      <ion-row><!-- Genero -->
                         <ion-col>Genero</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Fecha de Nacimiento -->
                         <ion-col>Nacimiento</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Fecha de Defunción -->
                         <ion-col>Defunción</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Edad Actual -->
                         <ion-col>Edad</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Tipo de Raza -->
                         <ion-col>Especie</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Trabajo -->
                         <ion-col>Ocupación</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Lugar de Nacimiento/Crianza -->
                         <ion-col>Procedencia</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Familiares -->
                         <ion-col>Familiares</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
-                      <ion-row><!-- Modify: Text -->
+                      <ion-row><!-- Amigos/Conocidos -->
                         <ion-col>Afiliados</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
@@ -182,7 +177,7 @@
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
                               <!-- Titulo --><ion-card-header>str</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
                             </ion-card>
                           </div>
                         </ion-col>
@@ -190,7 +185,7 @@
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
                               <!-- Titulo --><ion-card-header>dex</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
                             </ion-card>
                           </div>
                         </ion-col>
@@ -198,7 +193,7 @@
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
                               <!-- Titulo --><ion-card-header>con</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
                             </ion-card>
                           </div>
                         </ion-col>
@@ -208,7 +203,7 @@
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
                               <!-- Titulo --><ion-card-header>int</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
                             </ion-card>
                           </div>
                         </ion-col>
@@ -216,7 +211,7 @@
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
                               <!-- Titulo --><ion-card-header>wis</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
                             </ion-card>
                           </div>
                         </ion-col>
@@ -224,11 +219,116 @@
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
                               <!-- Titulo --><ion-card-header>cha</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;"><br><input type="number"style="width: 50px;">
+                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
                             </ion-card>
                           </div>
                         </ion-col>
                       </ion-row>
+                    </ion-card-content>
+                  </div>
+                  
+                </ion-accordion>
+              </ion-accordion-group>
+
+              <!-- Abilities --><ion-accordion-group>
+                <ion-accordion value="first">
+                  <!-- Nombre lista --><ion-item slot="header">
+                    <ion-card-title>Abilities</ion-card-title>
+                  </ion-item>
+
+                  <!-- Info Abilities --><div slot="content">
+                    <ion-card-content>
+                      <!-- Acrobatics --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Acrobatics</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Animal Handling --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Animal Handling</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Arcana --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Arcana</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Athletics --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Athletics</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Deception --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Deception</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- History --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>History</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Insight --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Insight</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Intimidation --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Intimidation</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Investigation --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Investigation</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Medicine --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Medicine</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Nature --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Nature</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Perception --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Perception</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Performance --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Performance</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Persuasion --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Persuasion</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Religion --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Religion</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Sleight of Hand --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Sleight of Hand</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Stealth --><ion-card style="width: 100%; margin: 0">
+                        <ion-row><ion-col>Stealth</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+                      <!-- Survival --><ion-card style="width: 100%; margin: 0;">
+                        <ion-row><ion-col>Survival</ion-col>
+                          <ion-col><input type="number" placeholder="0"></ion-col>
+                        </ion-row>
+                      </ion-card>
+
                     </ion-card-content>
                   </div>
                   
@@ -336,8 +436,13 @@
     } from 'ionicons/icons';
   
   // Labels of the cards
-  const buttonsCard1 = ref('1');
-  const buttonsCard2 = ref('1');
+  const buttonsCard1 = ref('Card1_Int');
+  const buttonsCard2 = ref('Card2_Cur');
+
+  // Input Text
+  const inputTextFrase1 = "«...»";
+  const inputTextFrase2 = "Name";
+  const inputTextIntroductorio = "...";
 </script>
 
 <style scoped>
