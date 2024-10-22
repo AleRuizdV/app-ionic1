@@ -34,11 +34,12 @@
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
           Personaje 1 V.1
         </ion-button>
-        <!-- Editar --> <ion-button shape="round"> 
-          <ion-icon slot="icon-only" :icon="heart">
+        <!-- Editar --> <ion-button shape="round" onclick="makeEditable(x)">
+          <ion-icon slot="icon-only" :icon="brush"> 
         </ion-icon></ion-button>
+        
         <!-- Exportar --> <ion-button shape="round"> 
-          <ion-icon slot="icon-only" :icon="heart">
+          <ion-icon slot="icon-only" :icon="arrowUp">
         </ion-icon></ion-button>
       </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
@@ -431,6 +432,8 @@
     } from 'vue';
   import { // Iconos
     heart, 
+    arrowUp,
+    brush,
     home, 
     film 
     } from 'ionicons/icons';
@@ -471,3 +474,4 @@
     padding-top: 100px;
     }
 </style>
+

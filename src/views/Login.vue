@@ -20,16 +20,18 @@
         <!-- Casillas --><ion-card-content>
           <!-- Inputs -->
           <ion-item>
-            <ion-input label="Mail"></ion-input>
+            <ion-input label="Email" type="email" placeholder="email@domain.com"></ion-input>
           </ion-item>
-          <ion-input type="password" label="Password">
-            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-          </ion-input>
+          <ion-item>
+            <ion-input label="Password" type="password">
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
 
           <!-- Buttons -->
           <ion-button>Log In</ion-button>
           <ion-button>
-            <ion-icon slot="start" :icon="star"></ion-icon> Access Google
+            <ion-icon slot="start" :icon="logoGoogle"></ion-icon> Access Google
           </ion-button>
 
         </ion-card-content>
@@ -72,7 +74,7 @@ import {
   IonButton, 
   IonIcon
   } from '@ionic/vue';
-  import { star } from 'ionicons/icons';
+  import { star, logoGoogle } from 'ionicons/icons';
 </script>
 
 <style scoped>
