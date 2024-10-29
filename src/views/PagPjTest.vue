@@ -34,7 +34,7 @@
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
           Personaje 1 V.1
         </ion-button>
-        <!-- Editar --> <ion-button shape="round" onclick="makeEditable(x)">
+        <!-- Editar --> <ion-button shape="round"> <!-- @click="makeEditable()" -->
           <ion-icon slot="icon-only" :icon="brush"> 
         </ion-icon></ion-button>
         
@@ -67,9 +67,9 @@
               <!-- Part 1: Text & Cuadro wiki--><ion-row>
                 <!-- Columna 1: Text --><ion-col>
                   <!-- Frase --><ion-card>
-                    <ion-card-content>{{ inputTextFrase1 }}</ion-card-content>
+                    <ion-card-content>«{{ inputTextFrase[0] }}»</ion-card-content>
                     <ion-card-header>
-                      <ion-card-subtitle>— {{ inputTextFrase2 }} </ion-card-subtitle>
+                      <ion-card-subtitle>— {{ inputTextFrase[1] }} </ion-card-subtitle>
                     </ion-card-header>
                   </ion-card>
 
@@ -414,7 +414,7 @@
     // Button
     IonButton, 
     IonIcon,
-    // Button
+    // Label
     IonLabel, 
     IonSegment, 
     IonSegmentButton,
@@ -438,14 +438,19 @@
     film 
     } from 'ionicons/icons';
   
-  // Labels of the cards
+  // Modification of text
   const buttonsCard1 = ref('Card1_Int');
   const buttonsCard2 = ref('Card2_Cur');
 
   // Input Text
-  const inputTextFrase1 = "«...»";
-  const inputTextFrase2 = "Name";
+  let inputTextFrase = [ // Frase, Nombre
+    "...", 
+    "Name"
+  ];
   const inputTextIntroductorio = "...";
+
+  // Options API
+  
 </script>
 
 <style scoped>
