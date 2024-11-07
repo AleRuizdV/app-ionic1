@@ -34,17 +34,19 @@
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
           Personaje 1 V.1
         </ion-button>
-        <!-- Editar --> <ion-button shape="round"> <!-- @click="makeEditable()" -->
-          <ion-icon slot="icon-only" :icon="brush"> 
-        </ion-icon></ion-button>
-        
+        <!-- _________________________________________________________________________________________ -->
+        <!-- Editar --><ion-button shape="round" @click="toggleEditMode">
+          {{ editMode ? 'Guardar' : 'Editar' }}
+        <ion-icon slot="icon-only" :icon="brush"></ion-icon>
+      </ion-button>
+        <!-- _________________________________________________________________________________________ -->
         <!-- Exportar --> <ion-button shape="round"> 
           <ion-icon slot="icon-only" :icon="arrowUp">
         </ion-icon></ion-button>
       </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
       <!-- Info Personaje --><div>
-        <!-- Card 1 --><ion-card class="carta_changeVersion">
+        <!-- Card 1 --><ion-card class="carta_changeVersion" v-for="(objeto, index) in card1_Text" :key="objeto.id">
           <!-- Segments-buttons for change content --><ion-card-header>
             <ion-segment v-model="buttonsCard1" >
               <ion-segment-button value="Card1_Int" >
@@ -67,22 +69,22 @@
               <!-- Part 1: Text & Cuadro wiki--><ion-row>
                 <!-- Columna 1: Text --><ion-col>
                   <!-- Frase --><ion-card>
-                    <ion-card-content>«{{ inputTextFrase[0] }}»</ion-card-content>
+                    <ion-card-content>«{{ objeto.frase }}»</ion-card-content>
                     <ion-card-header>
-                      <ion-card-subtitle>— {{ inputTextFrase[1] }} </ion-card-subtitle>
+                      <ion-card-subtitle>— {{ objeto.autor }} </ion-card-subtitle>
                     </ion-card-header>
                   </ion-card>
 
                   <!-- Texto Introductorio --><ion-card-content>
-                    {{ inputTextIntroductorio }}
+                    {{ objeto.introduction }}
                   </ion-card-content>
                 </ion-col>
-                <!--  -->
+
                 <!-- Columna 2: Wiki --><ion-col>
                   <ion-card>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombre de Personaje -->
-                    <ion-card-header><ion-card-title>Personaje</ion-card-title>
+                    <ion-card-header><ion-card-title>{{ objeto.nombreCorto }}</ion-card-title>
                     </ion-card-header>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Imagenes principales -->
@@ -94,11 +96,15 @@
                     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombres y apodos -->
-                    <ion-card-header><ion-card-title>Nombres</ion-card-title>
+                    <ion-card-header><ion-card-title>Nombre</ion-card-title>
                     </ion-card-header>                    
                     <!-- Modify: Text --><ion-card-content>
+                      <ion-row><!-- Nombre Completo -->
+                        <ion-col class="textBold">Nombre Completo</ion-col>
+                        <ion-col>{{ objeto.nombreCompleto }}</ion-col>
+                      </ion-row>
                       <ion-row><!-- Apodos -->
-                        <ion-col>Text</ion-col>
+                        <ion-col class="textBold">Apodos</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                     </ion-card-content>
@@ -108,49 +114,51 @@
                     </ion-card-header>
                     <!-- Modify: Text --><ion-card-content>
                       <ion-row><!-- Genero -->
-                        <ion-col>Genero</ion-col>
+                        <ion-col class="textBold">Genero</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Fecha de Nacimiento -->
-                        <ion-col>Nacimiento</ion-col>
+                        <ion-col class="textBold">Nacimiento</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Fecha de Defunción -->
-                        <ion-col>Defunción</ion-col>
+                        <ion-col class="textBold">Defunción</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Edad Actual -->
-                        <ion-col>Edad</ion-col>
+                        <ion-col class="textBold">Edad</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Tipo de Raza -->
-                        <ion-col>Especie</ion-col>
+                        <ion-col class="textBold">Especie</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Trabajo -->
-                        <ion-col>Ocupación</ion-col>
+                        <ion-col class="textBold">Ocupación</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Lugar de Nacimiento/Crianza -->
-                        <ion-col>Procedencia</ion-col>
+                        <ion-col class="textBold">Procedencia</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Familiares -->
-                        <ion-col>Familiares</ion-col>
+                        <ion-col class="textBold">Familiares</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                       <ion-row><!-- Amigos/Conocidos -->
-                        <ion-col>Afiliados</ion-col>
+                        <ion-col class="textBold">Afiliados</ion-col>
                         <ion-col>Response</ion-col>
                       </ion-row>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
               </ion-row>
-              <!-- Part 2.1: Index of Part 2.2--><div>
-                Index <!-- Agregar Index -->
+            
+              <!-- // Idea para Sumario del personaje
+              <div> // Part 2.1: Index of Part 2.2
+                Index // Agregar Index
               </div>
-              <!-- Part 2.2: More Text--><div>
+              <div> // Part 2.2: Sumario
                 <ion-card-header>
                   <ion-card-title>Sumario</ion-card-title>
                 </ion-card-header>
@@ -158,11 +166,11 @@
                   ...
                 </ion-card-content>
               </div>
-              
-            </div>
+              -->
+            </div><!-- =============================================================================== -->
             <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
               2 (Text - Imagenes)
-            </div>
+            </div><!-- =============================================================================== -->
             <!-- Stats & Habilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
               <!-- Stats --><ion-accordion-group>
@@ -336,10 +344,10 @@
                 </ion-accordion>
               </ion-accordion-group>
               
-            </div>
+            </div><!-- =============================================================================== -->
             <!-- Inventario--><div v-if="buttonsCard1 === 'Card1_Inv'">
               4 (D&D)
-            </div>
+            </div><!-- =============================================================================== -->
           </ion-card-content>
         </ion-card>
         <!-- _________________________________________________________________________________________ -->
@@ -361,7 +369,7 @@
           <!-- Contenido--><ion-card-content>
             <!-- Curiosidades--><div v-if="buttonsCard2 === 'Card2_Cur'">
               1 (Text)
-            </div>
+            </div><!-- =============================================================================== -->
             <!-- Galería--><div v-if="buttonsCard2 === 'Card2_Gal'">
               <ion-row>
                 <ion-col>
@@ -373,10 +381,10 @@
                   <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                 </ion-col>
               </ion-row>
-            </div>
+            </div><!-- =============================================================================== -->
             <!-- Updates--><div v-if="buttonsCard2 === 'Card2_Upd'">
               3 (Text)
-            </div>
+            </div><!-- =============================================================================== -->
           </ion-card-content>
         </ion-card>
       </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
@@ -392,8 +400,8 @@
   </ion-page>
 </template>
 
-<script setup lang="ts">
-  import { // Componentes
+<script setup>
+import {// Componentes
     // Base
     IonContent, 
     IonHeader, 
@@ -428,32 +436,90 @@
     IonItem
     } from '@ionic/vue';
   import { // ...
+    defineComponent,
     ref 
     } from 'vue';
   import { // Iconos
-    heart, 
     arrowUp,
     brush,
     home, 
     film 
     } from 'ionicons/icons';
-  
-  // Modification of text
-  const buttonsCard1 = ref('Card1_Int');
-  const buttonsCard2 = ref('Card2_Cur');
 
-  // Input Text
-  let inputTextFrase = [ // Frase, Nombre
-    "...", 
-    "Name"
-  ];
-  const inputTextIntroductorio = "...";
+// Labels cards ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+const buttonsCard1 = ref('Card1_Int');
+const buttonsCard2 = ref('Card2_Cur');
 
-  // Options API
-  
+// Text ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+const card1_Text = [
+// Part 1: Text & Cuadro wiki
+  {id:1, // Default
+    // Frase, Nombre, Introducción
+    frase:"...",
+    autor:"Name",
+    introduction:"...",
+    // Wiki Imagenes
+    // Wiki Text
+    nombreCorto: "Name",
+    nombreCompleto: "Response",
+    apodos: "Response",
+    genero: "Response",
+    dateBirth: "Response",
+    dateDeath: "Response",
+    edad: "Response",
+    especie: "Response",
+    ocupation: "Response",
+    procedencia: "Response",
+    familiares: "Response",
+    afiliados: "Response"
+  },
+  {id:2, // Prueba 1
+    // Frase, Nombre, Introducción
+    frase:"Si puedes hacer sangrar a Dios, la gente dejará de creer en él",
+    autor:"Whiplash",
+    introduction:"I'm Iron Man",
+    // Wiki Imagenes
+    // Wiki Text
+    nombreCorto: "Tony Stark",
+    nombreCompleto: "Anthony Edward Stark",
+    apodos: "Tony Iron Man (Alterego)",
+    genero: "Masculino",
+    dateBirth: "29 de mayo de 1970",
+    dateDeath: "17 de octubre de 2023",
+    edad: "53 años",
+    especie: "Humano",
+    ocupation: "Millonario, Filántropo, Superheroe",
+    procedencia: "Estadounidense",
+    familiares: "Peper Potts (Esposa) Morgan Stark (Hija) Howard Stark (Padre-Fallecido)",
+    afiliados: "Peter Parker (Aprendiz) J.A.R.V.I.S / Vision (Creación - Asistente virtual)"
+  }
+]
+
+// Old Code ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+let inputTextFrase = [ // Frase, Nombre
+  "...", 
+  "Name"
+];
+const inputTextIntroductorio = ref('Este es el texto introductorio.');
+/* -- Edit Change --
+const editMode = ref(false);
+const editText = ref('');
+
+const toggleEditMode = () => {
+  if (editMode.value) {
+    inputTextIntroductorio.value = editText.value;
+  } else {
+    editText.value = inputTextIntroductorio.value;
+  }
+  editMode.value = !editMode.value;
+};
+*/
 </script>
 
 <style scoped>
+  .textBold{
+    font-weight: bold
+  }
   #container {
     text-align: center;
     position: absolute;
