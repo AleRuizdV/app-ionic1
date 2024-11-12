@@ -31,14 +31,15 @@
       </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       
       <!-- Configuración Personaje --><div class="ConfigPJ"> 
-        <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px">
-          Personaje 1 V.1
+        <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px" @click="toggleChangeVersion">
+          Personaje 1 {{ changeVersion ? 'V.2' : 'V.1' }}
         </ion-button>
+
         <!-- _________________________________________________________________________________________ -->
         <!-- Editar --><ion-button shape="round" @click="toggleEditMode">
           {{ editMode ? 'Guardar' : 'Editar' }}
-        <ion-icon slot="icon-only" :icon="brush"></ion-icon>
-      </ion-button>
+          <ion-icon slot="icon-only" :icon="brush"></ion-icon>
+        </ion-button>
         <!-- _________________________________________________________________________________________ -->
         <!-- Exportar --> <ion-button shape="round"> 
           <ion-icon slot="icon-only" :icon="arrowUp">
@@ -263,7 +264,6 @@
                   
                 </ion-accordion>
               </ion-accordion-group>
-
               <!-- Abilities --><ion-accordion-group>
                 <ion-accordion value="first">
                   <!-- Nombre lista --><ion-item slot="header">
@@ -458,7 +458,9 @@ import {// Componentes
     // Acordion
     IonAccordion, 
     IonAccordionGroup, 
-    IonItem
+    IonItem,
+    // Popover
+    IonPopover
     } from '@ionic/vue';
   import { // ...
     defineComponent,
@@ -474,6 +476,15 @@ import {// Componentes
 // Labels cards ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const buttonsCard1 = ref('Card1_Int');
 const buttonsCard2 = ref('Card2_Cur');
+// Change buttons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+const editMode = ref(false);
+const toggleEditMode = () => {
+  editMode.value = !editMode.value;
+};
+const changeVersion = ref(false);
+const toggleChangeVersion = () => {
+  changeVersion.value = !changeVersion.value;
+}
 
 // Text ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const card1_Text = [
@@ -550,6 +561,8 @@ const card1_Text = [
   }
 ]
 
+
+
 // Old Code ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 let inputTextFrase = [ // Frase, Nombre
   "...", 
@@ -557,17 +570,7 @@ let inputTextFrase = [ // Frase, Nombre
 ];
 const inputTextIntroductorio = ref('Este es el texto introductorio.');
 /* -- Edit Change --
-const editMode = ref(false);
-const editText = ref('');
 
-const toggleEditMode = () => {
-  if (editMode.value) {
-    inputTextIntroductorio.value = editText.value;
-  } else {
-    editText.value = inputTextIntroductorio.value;
-  }
-  editMode.value = !editMode.value;
-};
 */
 </script>
 
