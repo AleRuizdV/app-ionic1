@@ -56,7 +56,7 @@
                 <ion-label>Historia</ion-label>
               </ion-segment-button>
               <ion-segment-button value="Card1_Sta">
-                <ion-label>Stats & Habilities</ion-label>
+                <ion-label>Stats & Abilities</ion-label>
               </ion-segment-button>
               <ion-segment-button value="Card1_Inv">
                 <ion-label>Inventario</ion-label>
@@ -115,39 +115,39 @@
                     <!-- Modify: Text --><ion-card-content>
                       <ion-row><!-- Genero -->
                         <ion-col class="textBold">Genero</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.genero }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Fecha de Nacimiento -->
                         <ion-col class="textBold">Nacimiento</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.dateBirth }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Fecha de Defunción -->
                         <ion-col class="textBold">Defunción</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.dateDeath }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Edad Actual -->
                         <ion-col class="textBold">Edad</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.edad }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Tipo de Raza -->
                         <ion-col class="textBold">Especie</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.especie }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Trabajo -->
                         <ion-col class="textBold">Ocupación</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.ocupation }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Lugar de Nacimiento/Crianza -->
                         <ion-col class="textBold">Procedencia</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.procedencia }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Familiares -->
                         <ion-col class="textBold">Familiares</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.familiares }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Amigos/Conocidos -->
                         <ion-col class="textBold">Afiliados</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col>{{ objeto.afiliados }}</ion-col>
                       </ion-row>
                     </ion-card-content>
                   </ion-card>
@@ -169,9 +169,10 @@
               -->
             </div><!-- =============================================================================== -->
             <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
-              2 (Text - Imagenes)
+              2 (Text - Imagenes) <br>
+              {{ objeto.historia }}
             </div><!-- =============================================================================== -->
-            <!-- Stats & Habilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
+            <!-- Stats & Abilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
               <!-- Stats --><ion-accordion-group>
                 <ion-accordion value="first">
@@ -185,24 +186,36 @@
                         <!-- 1. Str --><ion-col>
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header>str</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
+                              <!-- Titulo --><ion-card-header style="font-weight: bold;">str</ion-card-header>
+                              <!-- Inputs -->
+                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                                {{ objeto.stat_str1 }}</ion-card>
+                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                                {{ objeto.stat_str2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 2. Dex --><ion-col>
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header>dex</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
+                              <!-- Titulo --><ion-card-header style="font-weight: bold;">dex</ion-card-header>
+                              <!-- Inputs -->
+                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                                {{ objeto.stat_dex1 }}</ion-card>
+                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                                {{ objeto.stat_dex2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 3. Con --><ion-col>
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header>con</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
+                              <!-- Titulo --><ion-card-header style="font-weight: bold;">con</ion-card-header>
+                              <!-- Inputs -->
+                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                                {{ objeto.stat_con1 }}</ion-card>
+                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                                {{ objeto.stat_con2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -211,24 +224,36 @@
                         <!-- 4. Int --><ion-col>
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header>int</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
+                              <!-- Titulo --><ion-card-header style="font-weight: bold;">int</ion-card-header>
+                              <!-- Inputs -->
+                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                                {{ objeto.stat_int1 }}</ion-card>
+                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                                {{ objeto.stat_int2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 5. Wis --><ion-col>
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header>wis</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
+                              <!-- Titulo --><ion-card-header style="font-weight: bold;">wis</ion-card-header>
+                              <!-- Inputs -->
+                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                                {{ objeto.stat_wis1 }}</ion-card>
+                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                                {{ objeto.stat_wis2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 6. Cha --><ion-col>
                           <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
                             <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header>cha</ion-card-header>
-                              <!-- Inputs --><input type="number" style="width: 50px;" placeholder="0"><br><input type="number"style="width: 50px;" placeholder="0">
+                              <!-- Titulo --><ion-card-header style="font-weight: bold;">cha</ion-card-header>
+                              <!-- Inputs -->
+                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                                {{ objeto.stat_cha1 }}</ion-card>
+                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                                {{ objeto.stat_cha2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -452,8 +477,9 @@ const buttonsCard2 = ref('Card2_Cur');
 
 // Text ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const card1_Text = [
-// Part 1: Text & Cuadro wiki
+// Card 1
   {id:1, // Default
+    /* Card 1_ Introducción */
     // Frase, Nombre, Introducción
     frase:"...",
     autor:"Name",
@@ -471,13 +497,28 @@ const card1_Text = [
     ocupation: "Response",
     procedencia: "Response",
     familiares: "Response",
-    afiliados: "Response"
+    afiliados: "Response",
+    /* Card 1_ Historia 
+      Aberiguar: 
+        - Como colocar salto de texto.
+        - Como integrar imagenes que sean rodeadas por el texto.
+    */
+    historia: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus nulla ut velit viverra consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in felis risus. Suspendisse ullamcorper massa libero, vehicula facilisis mi tempus ac. Mauris tristique cursus lacus, in porttitor turpis tempor vitae. Nullam tincidunt nisl quis lectus mattis, quis ultrices arcu commodo. Nulla id aliquam ligula. Mauris diam arcu, mattis sed lorem in, commodo sollicitudin arcu. Aenean feugiat vitae lorem non imperdiet. Nullam varius euismod leo ac fermentum. In sit amet lacinia nisi. Suspendisse nec libero mollis, efficitur elit at, lobortis massa. Duis tincidunt sit amet mi non malesuada. Etiam sed commodo libero, vel suscipit sapien. Sed eget rhoncus mauris.",
+    /* Card 1_ Stats & Abilities */
+    stat_str1: "0", stat_str2: "0",
+    stat_dex1: "0", stat_dex2: "0",
+    stat_con1: "0", stat_con2: "0",
+    stat_int1: "0", stat_int2: "0",
+    stat_wis1: "0", stat_wis2: "0",
+    stat_cha1: "0", stat_cha2: "0",
+    /* Card 1_ Inventario */
   },
-  {id:2, // Prueba 1
+  {id:2, // Prueba 1 (Tony Stark)
+    /* Card 1_ Introducción */
     // Frase, Nombre, Introducción
-    frase:"Si puedes hacer sangrar a Dios, la gente dejará de creer en él",
-    autor:"Whiplash",
-    introduction:"I'm Iron Man",
+    frase:"I'm Iron Man",
+    autor:"Tony Stark",
+    introduction:"...",
     // Wiki Imagenes
     // Wiki Text
     nombreCorto: "Tony Stark",
@@ -491,7 +532,21 @@ const card1_Text = [
     ocupation: "Millonario, Filántropo, Superheroe",
     procedencia: "Estadounidense",
     familiares: "Peper Potts (Esposa) Morgan Stark (Hija) Howard Stark (Padre-Fallecido)",
-    afiliados: "Peter Parker (Aprendiz) J.A.R.V.I.S / Vision (Creación - Asistente virtual)"
+    afiliados: "Peter Parker (Aprendiz) J.A.R.V.I.S / Vision (Creación - Asistente virtual)",
+    /* Card 1_ Historia 
+      Aberiguar: 
+        - Como colocar salto de texto.
+        - Como integrar imagenes que sean rodeadas por el texto.
+    */
+    historia: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus nulla ut velit viverra consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in felis risus. Suspendisse ullamcorper massa libero, vehicula facilisis mi tempus ac. Mauris tristique cursus lacus, in porttitor turpis tempor vitae. Nullam tincidunt nisl quis lectus mattis, quis ultrices arcu commodo. Nulla id aliquam ligula. Mauris diam arcu, mattis sed lorem in, commodo sollicitudin arcu. Aenean feugiat vitae lorem non imperdiet. Nullam varius euismod leo ac fermentum. In sit amet lacinia nisi. Suspendisse nec libero mollis, efficitur elit at, lobortis massa. Duis tincidunt sit amet mi non malesuada. Etiam sed commodo libero, vel suscipit sapien. Sed eget rhoncus mauris.",
+    /* Card 1_ Stats & Abilities */
+    stat_str1: "0", stat_str2: "0",
+    stat_dex1: "0", stat_dex2: "0",
+    stat_con1: "0", stat_con2: "0",
+    stat_int1: "0", stat_int2: "0",
+    stat_wis1: "0", stat_wis2: "0",
+    stat_cha1: "0", stat_cha2: "0",
+    /* Card 1_ Inventario */
   }
 ]
 
