@@ -154,7 +154,6 @@
                   </ion-card>
                 </ion-col>
               </ion-row>
-            
               <!-- // Idea para Sumario del personaje
               <div> // Part 2.1: Index of Part 2.2
                 Index // Agregar Index
@@ -171,7 +170,8 @@
             </div><!-- =============================================================================== -->
             <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
               2 (Text - Imagenes) <br>
-              {{ card1_Text[currentNumber-1].historia }}
+              <p v-html="card1_Text[currentNumber-1].historia"></p>
+              <!-- {{ card1_Text[currentNumber-1].historia }} -->
             </div><!-- =============================================================================== -->
             <!-- Stats & Abilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
@@ -274,92 +274,92 @@
                     <ion-card-content>
                       <!-- Acrobatics --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Acrobatics</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_acrobatics }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Animal Handling --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Animal Handling</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_animalHandling }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Arcana --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Arcana</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_arcana }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Athletics --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Athletics</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_athletics }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Deception --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Deception</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_deception }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- History --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>History</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_history }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Insight --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Insight</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_insight }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Intimidation --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Intimidation</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_intimidation }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Investigation --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Investigation</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_investigation }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Medicine --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Medicine</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_medicine }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Nature --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Nature</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_nature }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Perception --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Perception</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_perception }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Performance --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Performance</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_performance }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Persuasion --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Persuasion</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_persuasion }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Religion --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Religion</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_religion }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Sleight of Hand --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Sleight of Hand</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_sleightOfHand }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Stealth --><ion-card style="width: 100%; margin: 0">
                         <ion-row><ion-col>Stealth</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_stealth }}</ion-col>
                         </ion-row>
                       </ion-card>
                       <!-- Survival --><ion-card style="width: 100%; margin: 0;">
                         <ion-row><ion-col>Survival</ion-col>
-                          <ion-col><input type="number" placeholder="0"></ion-col>
+                          <ion-col>{{ card1_Text[currentNumber-1].ability_survival }}</ion-col>
                         </ion-row>
                       </ion-card>
 
@@ -501,9 +501,9 @@ const card1_Text = [
     familiares: "Response",
     afiliados: "Response",
     /* Card 1_ Historia 
-      Aberiguar: 
-        - Como colocar salto de texto.
-        - Como integrar imagenes que sean rodeadas por el texto.
+      Como Interactuar: 
+        - Salto de texto = <br>
+        - Integrar imagenes = <img src="" alt="Image">
     */
     historia: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus nulla ut velit viverra consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in felis risus. Suspendisse ullamcorper massa libero, vehicula facilisis mi tempus ac. Mauris tristique cursus lacus, in porttitor turpis tempor vitae. Nullam tincidunt nisl quis lectus mattis, quis ultrices arcu commodo. Nulla id aliquam ligula. Mauris diam arcu, mattis sed lorem in, commodo sollicitudin arcu. Aenean feugiat vitae lorem non imperdiet. Nullam varius euismod leo ac fermentum. In sit amet lacinia nisi. Suspendisse nec libero mollis, efficitur elit at, lobortis massa. Duis tincidunt sit amet mi non malesuada. Etiam sed commodo libero, vel suscipit sapien. Sed eget rhoncus mauris.",
     /* Card 1_ Stats & Abilities */
@@ -513,6 +513,24 @@ const card1_Text = [
     stat_int1: "0", stat_int2: "0",
     stat_wis1: "0", stat_wis2: "0",
     stat_cha1: "0", stat_cha2: "0",
+    ability_acrobatics: "0",
+    ability_animalHandling: "0",
+    ability_arcana: "0",
+    ability_athletics: "0",
+    ability_deception: "0",
+    ability_history: "0",
+    ability_insight: "0",
+    ability_intimidation: "0",
+    ability_investigation: "0",
+    ability_medicine: "0",
+    ability_nature: "0",
+    ability_perception: "0",
+    ability_performance: "0",
+    ability_persuasion: "0",
+    ability_religion: "0",
+    ability_sleightOfHand: "0",
+    ability_stealth: "0",
+    ability_Survival: "0",
     /* Card 1_ Inventario */
   },
   {id:2, // Prueba 1 (Tony Stark)
@@ -536,9 +554,9 @@ const card1_Text = [
     familiares: "Peper Potts (Esposa) Morgan Stark (Hija) Howard Stark (Padre-Fallecido)",
     afiliados: "Peter Parker (Aprendiz) J.A.R.V.I.S / Vision (Creación - Asistente virtual)",
     /* Card 1_ Historia 
-      Aberiguar: 
-        - Como colocar salto de texto.
-        - Como integrar imagenes que sean rodeadas por el texto.
+      Como Interactuar: 
+        - Salto de texto = <br>
+        - Integrar imagenes = <img src="" alt="Image">
     */
     historia: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus nulla ut velit viverra consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in felis risus. Suspendisse ullamcorper massa libero, vehicula facilisis mi tempus ac. Mauris tristique cursus lacus, in porttitor turpis tempor vitae. Nullam tincidunt nisl quis lectus mattis, quis ultrices arcu commodo. Nulla id aliquam ligula. Mauris diam arcu, mattis sed lorem in, commodo sollicitudin arcu. Aenean feugiat vitae lorem non imperdiet. Nullam varius euismod leo ac fermentum. In sit amet lacinia nisi. Suspendisse nec libero mollis, efficitur elit at, lobortis massa. Duis tincidunt sit amet mi non malesuada. Etiam sed commodo libero, vel suscipit sapien. Sed eget rhoncus mauris.",
     /* Card 1_ Stats & Abilities */
@@ -548,6 +566,24 @@ const card1_Text = [
     stat_int1: "0", stat_int2: "0",
     stat_wis1: "0", stat_wis2: "0",
     stat_cha1: "0", stat_cha2: "0",
+    ability_acrobatics: "0",
+    ability_animalHandling: "0",
+    ability_arcana: "0",
+    ability_athletics: "0",
+    ability_deception: "0",
+    ability_history: "0",
+    ability_insight: "0",
+    ability_intimidation: "0",
+    ability_investigation: "0",
+    ability_medicine: "0",
+    ability_nature: "0",
+    ability_perception: "0",
+    ability_performance: "0",
+    ability_persuasion: "0",
+    ability_religion: "0",
+    ability_sleightOfHand: "0",
+    ability_stealth: "0",
+    ability_Survival: "0",
     /* Card 1_ Inventario */
   }
 ]
