@@ -77,7 +77,7 @@
                   </ion-card>
 
                   <!-- Texto Introductorio --><ion-card-content>
-                    {{ card1_Text[currentNumber-1].introduction }}
+                    <p v-html="card1_Text[currentNumber-1].introduction"></p>
                   </ion-card-content>
                 </ion-col>
 
@@ -106,7 +106,7 @@
                       </ion-row>
                       <ion-row><!-- Apodos -->
                         <ion-col class="textBold">Apodos</ion-col>
-                        <ion-col>Response</ion-col>
+                        <ion-col><p v-html="card1_Text[currentNumber-1].apodos"></p></ion-col>
                       </ion-row>
                     </ion-card-content>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
@@ -144,11 +144,11 @@
                       </ion-row>
                       <ion-row><!-- Familiares -->
                         <ion-col class="textBold">Familiares</ion-col>
-                        <ion-col>{{ card1_Text[currentNumber-1].familiares }}</ion-col>
+                        <ion-col><p v-html="card1_Text[currentNumber-1].familiares"></p></ion-col>
                       </ion-row>
                       <ion-row><!-- Amigos/Conocidos -->
                         <ion-col class="textBold">Afiliados</ion-col>
-                        <ion-col>{{ card1_Text[currentNumber-1].afiliados }}</ion-col>
+                        <ion-col><p v-html="card1_Text[currentNumber-1].afiliados"></p></ion-col>
                       </ion-row>
                     </ion-card-content>
                   </ion-card>
@@ -169,12 +169,10 @@
               -->
             </div><!-- =============================================================================== -->
             <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
-              2 (Text - Imagenes) <br>
               <p v-html="card1_Text[currentNumber-1].historia"></p>
               <!-- {{ card1_Text[currentNumber-1].historia }} -->
             </div><!-- =============================================================================== -->
             <!-- Stats & Abilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
-              3 (D&D)
               <!-- Stats --><ion-accordion-group>
                 <ion-accordion value="first">
                   <!-- Nombre lista --><ion-item slot="header">
@@ -502,7 +500,7 @@ const card1_Text = [
     afiliados: "Response",
     /* Card 1_ Historia 
       Como Interactuar: 
-        - Salto de texto = <br>
+        - Salto de texto = "+"<br>"+"
         - Integrar imagenes = <img src="" alt="Image">
     */
     historia: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus nulla ut velit viverra consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in felis risus. Suspendisse ullamcorper massa libero, vehicula facilisis mi tempus ac. Mauris tristique cursus lacus, in porttitor turpis tempor vitae. Nullam tincidunt nisl quis lectus mattis, quis ultrices arcu commodo. Nulla id aliquam ligula. Mauris diam arcu, mattis sed lorem in, commodo sollicitudin arcu. Aenean feugiat vitae lorem non imperdiet. Nullam varius euismod leo ac fermentum. In sit amet lacinia nisi. Suspendisse nec libero mollis, efficitur elit at, lobortis massa. Duis tincidunt sit amet mi non malesuada. Etiam sed commodo libero, vel suscipit sapien. Sed eget rhoncus mauris.",
@@ -536,14 +534,14 @@ const card1_Text = [
   {id:2, // Prueba 1 (Tony Stark)
     /* Card 1_ Introducción */
     // Frase, Nombre, Introducción
-    frase:"I'm Iron Man",
-    autor:"Tony Stark",
+    frase:"Y si debo dar esto por terminado, dejarlo por la paz o como sea, supongo que diré, que mi armadura, nunca fue una distracción, o un pasatiempo, era una capullo, y ahora, soy un hombre nuevo. Podrán arrebatarme mi casa, todos mis trucos y juguetes, pero hay algo que no pueden quitarme... yo soy Iron Man.",
+    autor:"Anthony Stark",
     introduction:"...",
     // Wiki Imagenes
     // Wiki Text
     nombreCorto: "Tony Stark",
     nombreCompleto: "Anthony Edward Stark",
-    apodos: "Tony Iron Man (Alterego)",
+    apodos: "Tony"+"<br>"+"Iron Man (Alterego)",
     genero: "Masculino",
     dateBirth: "29 de mayo de 1970",
     dateDeath: "17 de octubre de 2023",
@@ -551,14 +549,21 @@ const card1_Text = [
     especie: "Humano",
     ocupation: "Millonario, Filántropo, Superheroe",
     procedencia: "Estadounidense",
-    familiares: "Peper Potts (Esposa) Morgan Stark (Hija) Howard Stark (Padre-Fallecido)",
-    afiliados: "Peter Parker (Aprendiz) J.A.R.V.I.S / Vision (Creación - Asistente virtual)",
+    familiares: "Peper Potts (Esposa)"+"<br>"+" Morgan Stark (Hija)"+"<br>"+" Howard Stark (Padre-Fallecido)",
+    afiliados: "Peter Parker (Aprendiz)"+"<br>"+" J.A.R.V.I.S / Vision (Creación - Asistente virtual)",
     /* Card 1_ Historia 
       Como Interactuar: 
-        - Salto de texto = <br>
+        - Salto de texto = "+"<br>"+"
         - Integrar imagenes = <img src="" alt="Image">
     */
-    historia: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus nulla ut velit viverra consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus in felis risus. Suspendisse ullamcorper massa libero, vehicula facilisis mi tempus ac. Mauris tristique cursus lacus, in porttitor turpis tempor vitae. Nullam tincidunt nisl quis lectus mattis, quis ultrices arcu commodo. Nulla id aliquam ligula. Mauris diam arcu, mattis sed lorem in, commodo sollicitudin arcu. Aenean feugiat vitae lorem non imperdiet. Nullam varius euismod leo ac fermentum. In sit amet lacinia nisi. Suspendisse nec libero mollis, efficitur elit at, lobortis massa. Duis tincidunt sit amet mi non malesuada. Etiam sed commodo libero, vel suscipit sapien. Sed eget rhoncus mauris.",
+    historia: "Anthony Edward 'Tony' Stark fue un multimillonario industrial, anterior Director General de Industrias Stark y miembro fundador de los Vengadores. Siendo el hijo de Howard Stark y poseyendo un gran intelecto, Stark se volvió un inventor de armas mundialmente reconocido hasta que fue secuestrado por los Diez Anillos. En su cautiverio, él diseñó un traje blindado para escapar de la organización, regresando a casa y convirtiéndose en el superhéroe conocido como Iron Man, luchando contra los terroristas y su ex compañero de negocios, Obadiah Stane. Stark gozó de la fama que le llegó con su nueva identidad secreta y decidió compartirla con el mundo, anunciando públicamente que él era Iron Man. "+"<br>"+
+    " Después de un tiempo y tras hacer la apertura de la Stark Expo, Stark se encontró muriendo debido a que su Reactor Arc estaba envenenando su cuerpo, y fue confrontado por el vengativo terrorista, Ivan Vanko. Stark nombró a Virginia Potts como la nueva Directora General de Industrias Stark, y decidió ignorar sus problemas para disfrutar de sus aparentes últimos días de vida. No obstante, Nicholas Fury se acercó para entregarle un viejo baúl de Howard Stark, donde este encontró lo necesario para desarrollar un nuevo elemento, el cual lo curó de su envenenamiento. Ya recuperado, Stark venció a Vanko con ayuda de James Rhodes, inició una relación romántica con Potts y aceptó trabajar como consultor de S.H.I.E.L.D. "+"<br>"+
+    " Con el mundo nuevamente puesto bajo amenaza, Stark, a regañadientes, se unió a los Vengadores para ayudar a derrotar a Loki, desarrollando asímismo una amistad con Bruce Banner y entró en conflicto con Steven Rogers sobre sus ideales acerca del heroísmo. A pesar de su desconfianza, Stark aprendió a trabajar en equipo, consiguiendo derrotar a Loki y al ejército Chitauri destruyendo el Centro de Comando Chitauri en el espacio. No obstante, la Batalla de Nueva York hizo que Stark padeciera de trastorno de estrés postraumático, llevándolo a crear a la Legión de Hierro en un intento por proteger el mundo. "+"<br>"+
+    " Más adelante, las amenazas del Mandarín obligaron a Stark a proteger a los Estados Unidos, poniendo en riesgo a sus seres queridos y dejándolo indefenso cuando su mansión fue destruida. Ayudado brevemente por Harley Keener, Stark descubrió que Aldrich Killian estaba detrás de los ataques y que Trevor Slattery era un Mandarín simulado para cubrir sus experimentos hechos a partir del Extremis. Finalmente, Stark y James Rhodes detuvieron sus planes, aunque Stark casi pierde a Potts en el proceso. A raíz de la batalla, él destruyó todas sus armaduras de la Legión de Hierro con el Protocolo Clean Slate y se tomó un descanso en su labor como superhéroe. "+"<br>"+
+    " No obstante, Stark pronto se reunió con los Vengadores para desmantelar la amenaza creciente de HYDRA dirigida por Wolfgang von Strucker. Aunque ganaron, Stark y Bruce Banner decidieron crear a Ultrón para asegurar la protección del mundo, no obstante, la inteligencia artificial desertó la idea y en su lugar optó por destruir a la humanidad. Una vez más, Stark fue confrontado por Steven Rogers y el equipo al no informarles de su creación en un principio. Como estaban en desventaja, Stark ayudó a crear a Visión, quien finalmente destruyó a Ultrón. Más tarde, Stark decidió retirarse del equipo al sentirse culpable del caos ocasionado por la inteligencia artificial creada. "+"<br>"+
+    " Posteriormente, Stark se reunió con Thaddeus Ross y crearon los Acuerdos de Sokovia para controlar las acciones de los Vengadores. Sin embargo, el gran apoyo de Stark sobre los documentos lo pusieron en desacuerdo con Steven Rogers, quien procedió a proteger a James Barnes de su arresto, por lo que Stark dirigió una persecución contra su viejo aliado, iniciando la Guerra Civil de los Vengadores. Durante una tregua por arrestar a Helmut Zemo, Stark descubrió que Barnes fue quien asesinó a sus padres, resultando en una pelea, la cual Rogers ganó y dejó caer su escudo, antes de tomar caminos separados. Liderando a los pocos Vengadores que quedaban, Stark regresó a Nueva York y se hizo mentor de Peter Parker, a quien convirtió en un mejor héroe de lo que nunca fue. "+"<br>"+
+    " Pronto, Stark fue reclutado por Stephen Strange y Bruce Banner para defender la Tierra del ataque de Thanos. Como resultado, Stark y Peter Parker abordaron la Nave-Q para rescatar a Strange capturado por Ebony Maw, y aterrizaron Titán, donde junto con los Guardianes de la Galaxia, enfrentaron a Thanos. No obstante, cada uno fue derrotado, perdiendo la Gema del Tiempo. Después que Thanos realizó el Chasquido al reunir las Gemas del Infinito para eliminar a la mitad de la vida en el univeso, Stark y Nebula fueron los únicos sobrevivientes en Titán. Los dos abordaron el Benatar y fueron ayudados por Carol Danvers a volver a la Tierra. Aunque los Vengadores sobrevivientes consiguieron eliminar a Thanos, Stark se retiró, casándose con Virginia Potts y teniendo una hija, Morgan Stark. "+"<br>"+
+    " En 2023, Stark fue convencido de ayudar a los Vengadores a viajar en el tiempo por medio del Reino Cuántico para recuperar las Gemas del Infinito del pasado. Stark le devolvió su escudo a Rogers, y recuperaron tanto la Gema de la Mente como la Gema del Espacio en los años 2012 y 1970, respectivamente, con este último viaje permitiéndole reencontrarse brevemente con su padre, Howard Stark. Con las Gemas reunidas, Stark fue testigo de como Bruce Banner consiguió revivir a la mitad de la vida en el universo. Después, él y los Vengadores fueron confrontados por el ejército de un Thanos alternativo en la Batalla de la Tierra, sin embargo, Stark decidió usar el poder de las Gemas para eliminar a Thanos y sus tropas, sacrificando su propia vida en el proceso. Salvando a todo el universo de la destrucción, dejando un legado como uno de los superhéroes más venerados de la Tierra.",
     /* Card 1_ Stats & Abilities */
     stat_str1: "0", stat_str2: "0",
     stat_dex1: "0", stat_dex2: "0",
