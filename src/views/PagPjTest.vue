@@ -32,7 +32,7 @@
       
       <!-- Configuración Personaje --><div class="ConfigPJ"> 
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px" @click="toggleChangeVersion">
-          Personaje 1 {{ changeVersion ? 'V.2' : 'V.1' }}
+          Personaje 1 Ver.{{ currentNumber }}
         </ion-button>
 
         <!-- _________________________________________________________________________________________ -->
@@ -47,7 +47,7 @@
       </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
       <!-- Info Personaje --><div>
-        <!-- Card 1 --><ion-card class="carta_changeVersion" v-for="(objeto, index) in card1_Text" :key="objeto.id">
+        <!-- Card 1 --><ion-card class="carta_changeVersion">
           <!-- Segments-buttons for change content --><ion-card-header>
             <ion-segment v-model="buttonsCard1" >
               <ion-segment-button value="Card1_Int" >
@@ -70,14 +70,14 @@
               <!-- Part 1: Text & Cuadro wiki--><ion-row>
                 <!-- Columna 1: Text --><ion-col>
                   <!-- Frase --><ion-card>
-                    <ion-card-content>«{{ objeto.frase }}»</ion-card-content>
+                    <ion-card-content>«{{ card1_Text[currentNumber-1].frase }}»</ion-card-content>
                     <ion-card-header>
-                      <ion-card-subtitle>— {{ objeto.autor }} </ion-card-subtitle>
+                      <ion-card-subtitle>— {{ card1_Text[currentNumber-1].autor }} </ion-card-subtitle>
                     </ion-card-header>
                   </ion-card>
 
                   <!-- Texto Introductorio --><ion-card-content>
-                    {{ objeto.introduction }}
+                    {{ card1_Text[currentNumber-1].introduction }}
                   </ion-card-content>
                 </ion-col>
 
@@ -85,7 +85,7 @@
                   <ion-card>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombre de Personaje -->
-                    <ion-card-header><ion-card-title>{{ objeto.nombreCorto }}</ion-card-title>
+                    <ion-card-header><ion-card-title>{{ card1_Text[currentNumber-1].nombreCorto }}</ion-card-title>
                     </ion-card-header>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Imagenes principales -->
@@ -102,7 +102,7 @@
                     <!-- Modify: Text --><ion-card-content>
                       <ion-row><!-- Nombre Completo -->
                         <ion-col class="textBold">Nombre Completo</ion-col>
-                        <ion-col>{{ objeto.nombreCompleto }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].nombreCompleto }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Apodos -->
                         <ion-col class="textBold">Apodos</ion-col>
@@ -116,39 +116,39 @@
                     <!-- Modify: Text --><ion-card-content>
                       <ion-row><!-- Genero -->
                         <ion-col class="textBold">Genero</ion-col>
-                        <ion-col>{{ objeto.genero }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].genero }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Fecha de Nacimiento -->
                         <ion-col class="textBold">Nacimiento</ion-col>
-                        <ion-col>{{ objeto.dateBirth }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].dateBirth }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Fecha de Defunción -->
                         <ion-col class="textBold">Defunción</ion-col>
-                        <ion-col>{{ objeto.dateDeath }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].dateDeath }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Edad Actual -->
                         <ion-col class="textBold">Edad</ion-col>
-                        <ion-col>{{ objeto.edad }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].edad }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Tipo de Raza -->
                         <ion-col class="textBold">Especie</ion-col>
-                        <ion-col>{{ objeto.especie }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].especie }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Trabajo -->
                         <ion-col class="textBold">Ocupación</ion-col>
-                        <ion-col>{{ objeto.ocupation }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].ocupation }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Lugar de Nacimiento/Crianza -->
                         <ion-col class="textBold">Procedencia</ion-col>
-                        <ion-col>{{ objeto.procedencia }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].procedencia }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Familiares -->
                         <ion-col class="textBold">Familiares</ion-col>
-                        <ion-col>{{ objeto.familiares }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].familiares }}</ion-col>
                       </ion-row>
                       <ion-row><!-- Amigos/Conocidos -->
                         <ion-col class="textBold">Afiliados</ion-col>
-                        <ion-col>{{ objeto.afiliados }}</ion-col>
+                        <ion-col>{{ card1_Text[currentNumber-1].afiliados }}</ion-col>
                       </ion-row>
                     </ion-card-content>
                   </ion-card>
@@ -171,7 +171,7 @@
             </div><!-- =============================================================================== -->
             <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
               2 (Text - Imagenes) <br>
-              {{ objeto.historia }}
+              {{ card1_Text[currentNumber-1].historia }}
             </div><!-- =============================================================================== -->
             <!-- Stats & Abilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               3 (D&D)
@@ -190,9 +190,9 @@
                               <!-- Titulo --><ion-card-header style="font-weight: bold;">str</ion-card-header>
                               <!-- Inputs -->
                               <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
-                                {{ objeto.stat_str1 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_str1 }}</ion-card>
                               <ion-card style="text-align: center; width: 70%; margin: 15%;">
-                                {{ objeto.stat_str2 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_str2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -202,9 +202,9 @@
                               <!-- Titulo --><ion-card-header style="font-weight: bold;">dex</ion-card-header>
                               <!-- Inputs -->
                               <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
-                                {{ objeto.stat_dex1 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_dex1 }}</ion-card>
                               <ion-card style="text-align: center; width: 70%; margin: 15%;">
-                                {{ objeto.stat_dex2 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_dex2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -214,9 +214,9 @@
                               <!-- Titulo --><ion-card-header style="font-weight: bold;">con</ion-card-header>
                               <!-- Inputs -->
                               <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
-                                {{ objeto.stat_con1 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_con1 }}</ion-card>
                               <ion-card style="text-align: center; width: 70%; margin: 15%;">
-                                {{ objeto.stat_con2 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_con2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -228,9 +228,9 @@
                               <!-- Titulo --><ion-card-header style="font-weight: bold;">int</ion-card-header>
                               <!-- Inputs -->
                               <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
-                                {{ objeto.stat_int1 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_int1 }}</ion-card>
                               <ion-card style="text-align: center; width: 70%; margin: 15%;">
-                                {{ objeto.stat_int2 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_int2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -240,9 +240,9 @@
                               <!-- Titulo --><ion-card-header style="font-weight: bold;">wis</ion-card-header>
                               <!-- Inputs -->
                               <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
-                                {{ objeto.stat_wis1 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_wis1 }}</ion-card>
                               <ion-card style="text-align: center; width: 70%; margin: 15%;">
-                                {{ objeto.stat_wis2 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_wis2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -252,9 +252,9 @@
                               <!-- Titulo --><ion-card-header style="font-weight: bold;">cha</ion-card-header>
                               <!-- Inputs -->
                               <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
-                                {{ objeto.stat_cha1 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_cha1 }}</ion-card>
                               <ion-card style="text-align: center; width: 70%; margin: 15%;">
-                                {{ objeto.stat_cha2 }}</ion-card>
+                                {{ card1_Text[currentNumber-1].stat_cha2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
@@ -476,15 +476,6 @@ import {// Componentes
 // Labels cards ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const buttonsCard1 = ref('Card1_Int');
 const buttonsCard2 = ref('Card2_Cur');
-// Change buttons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-const editMode = ref(false);
-const toggleEditMode = () => {
-  editMode.value = !editMode.value;
-};
-const changeVersion = ref(false);
-const toggleChangeVersion = () => {
-  changeVersion.value = !changeVersion.value;
-}
 
 // Text ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const card1_Text = [
@@ -561,17 +552,17 @@ const card1_Text = [
   }
 ]
 
-
-
-// Old Code ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-let inputTextFrase = [ // Frase, Nombre
-  "...", 
-  "Name"
-];
-const inputTextIntroductorio = ref('Este es el texto introductorio.');
-/* -- Edit Change --
-
-*/
+// Change buttons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+const editMode = ref(false);
+const toggleEditMode = () => {
+  editMode.value = !editMode.value;
+};
+const versionsCount = card1_Text.length;
+const currentNumber = ref(1);
+const toggleChangeVersion = () => {
+  currentNumber.value = currentNumber.value % versionsCount + 1; 
+  // El valor despues del simbolo % deve ser alterado segúna la cantidad de entidades de card1_Text
+};
 </script>
 
 <style scoped>
