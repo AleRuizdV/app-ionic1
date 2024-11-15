@@ -34,7 +34,6 @@
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px" @click="toggleChangeVersion">
           Personaje 1 Ver.{{ currentNumber }}
         </ion-button>
-
         <!-- _________________________________________________________________________________________ -->
         <!-- Editar --><ion-button shape="round" @click="toggleEditMode">
           {{ editMode ? 'Guardar' : 'Editar' }}
@@ -183,37 +182,37 @@
                     <ion-card-content>
                       <!-- Str | Dex | Con --><ion-row>
                         <!-- 1. Str --><ion-col>
-                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header style="font-weight: bold;">str</ion-card-header>
+                          <div class="statStyle">
+                            <ion-card class="statStyleBorder">
+                              <!-- Titulo --><ion-card-header class="textBold">str</ion-card-header>
                               <!-- Inputs -->
-                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                              <ion-card class="statStyleContent1">
                                 {{ card1_Text[currentNumber-1].stat_str1 }}</ion-card>
-                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                              <ion-card class="statStyleContent2">
                                 {{ card1_Text[currentNumber-1].stat_str2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 2. Dex --><ion-col>
-                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header style="font-weight: bold;">dex</ion-card-header>
+                          <div class="statStyle">
+                            <ion-card class="statStyleBorder">
+                              <!-- Titulo --><ion-card-header class="textBold">dex</ion-card-header>
                               <!-- Inputs -->
-                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                              <ion-card class="statStyleContent1">
                                 {{ card1_Text[currentNumber-1].stat_dex1 }}</ion-card>
-                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                              <ion-card class="statStyleContent2">
                                 {{ card1_Text[currentNumber-1].stat_dex2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 3. Con --><ion-col>
-                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header style="font-weight: bold;">con</ion-card-header>
+                          <div class="statStyle">
+                            <ion-card class="statStyleBorder">
+                              <!-- Titulo --><ion-card-header class="textBold">con</ion-card-header>
                               <!-- Inputs -->
-                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                              <ion-card class="statStyleContent1">
                                 {{ card1_Text[currentNumber-1].stat_con1 }}</ion-card>
-                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                              <ion-card class="statStyleContent2">
                                 {{ card1_Text[currentNumber-1].stat_con2 }}</ion-card>
                             </ion-card>
                           </div>
@@ -221,37 +220,37 @@
                       </ion-row>
                       <!-- Int | Wis | Cha --><ion-row>
                         <!-- 4. Int --><ion-col>
-                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header style="font-weight: bold;">int</ion-card-header>
+                          <div class="statStyle">
+                            <ion-card class="statStyleBorder">
+                              <!-- Titulo --><ion-card-header class="textBold">int</ion-card-header>
                               <!-- Inputs -->
-                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                              <ion-card class="statStyleContent1">
                                 {{ card1_Text[currentNumber-1].stat_int1 }}</ion-card>
-                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                              <ion-card class="statStyleContent2">
                                 {{ card1_Text[currentNumber-1].stat_int2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 5. Wis --><ion-col>
-                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header style="font-weight: bold;">wis</ion-card-header>
+                          <div class="statStyle">
+                            <ion-card class="statStyleBorder">
+                              <!-- Titulo --><ion-card-header class="textBold">wis</ion-card-header>
                               <!-- Inputs -->
-                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                              <ion-card class="statStyleContent1">
                                 {{ card1_Text[currentNumber-1].stat_wis1 }}</ion-card>
-                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                              <ion-card class="statStyleContent2">
                                 {{ card1_Text[currentNumber-1].stat_wis2 }}</ion-card>
                             </ion-card>
                           </div>
                         </ion-col>
                         <!-- 6. Cha --><ion-col>
-                          <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <ion-card style="border: 2px solid red; padding: 5px;">
-                              <!-- Titulo --><ion-card-header style="font-weight: bold;">cha</ion-card-header>
+                          <div class="statStyle">
+                            <ion-card class="statStyleBorder">
+                              <!-- Titulo --><ion-card-header class="textBold">cha</ion-card-header>
                               <!-- Inputs -->
-                              <ion-card style="text-align: center; width: 70%; margin: 0 15%;">
+                              <ion-card class="statStyleContent1">
                                 {{ card1_Text[currentNumber-1].stat_cha1 }}</ion-card>
-                              <ion-card style="text-align: center; width: 70%; margin: 15%;">
+                              <ion-card class="statStyleContent2">
                                 {{ card1_Text[currentNumber-1].stat_cha2 }}</ion-card>
                             </ion-card>
                           </div>
@@ -270,92 +269,92 @@
 
                   <!-- Info Abilities --><div slot="content">
                     <ion-card-content>
-                      <!-- Acrobatics --><ion-card style="width: 100%; margin: 0">
+                      <!-- Acrobatics --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Acrobatics</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_acrobatics }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Animal Handling --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Animal Handling --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Animal Handling</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_animalHandling }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Arcana --><ion-card style="width: 100%; margin: 0">
+                      <!-- Arcana --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Arcana</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_arcana }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Athletics --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Athletics --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Athletics</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_athletics }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Deception --><ion-card style="width: 100%; margin: 0">
+                      <!-- Deception --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Deception</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_deception }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- History --><ion-card style="width: 100%; margin: 0;">
+                      <!-- History --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>History</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_history }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Insight --><ion-card style="width: 100%; margin: 0">
+                      <!-- Insight --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Insight</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_insight }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Intimidation --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Intimidation --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Intimidation</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_intimidation }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Investigation --><ion-card style="width: 100%; margin: 0">
+                      <!-- Investigation --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Investigation</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_investigation }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Medicine --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Medicine --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Medicine</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_medicine }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Nature --><ion-card style="width: 100%; margin: 0">
+                      <!-- Nature --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Nature</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_nature }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Perception --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Perception --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Perception</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_perception }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Performance --><ion-card style="width: 100%; margin: 0">
+                      <!-- Performance --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Performance</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_performance }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Persuasion --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Persuasion --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Persuasion</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_persuasion }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Religion --><ion-card style="width: 100%; margin: 0">
+                      <!-- Religion --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Religion</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_religion }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Sleight of Hand --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Sleight of Hand --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Sleight of Hand</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_sleightOfHand }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Stealth --><ion-card style="width: 100%; margin: 0">
+                      <!-- Stealth --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Stealth</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_stealth }}</ion-col>
                         </ion-row>
                       </ion-card>
-                      <!-- Survival --><ion-card style="width: 100%; margin: 0;">
+                      <!-- Survival --><ion-card class="abilitieStyle">
                         <ion-row><ion-col>Survival</ion-col>
                           <ion-col>{{ card1_Text[currentNumber-1].ability_survival }}</ion-col>
                         </ion-row>
@@ -366,7 +365,6 @@
                   
                 </ion-accordion>
               </ion-accordion-group>
-              
             </div><!-- =============================================================================== -->
             <!-- Inventario--><div v-if="buttonsCard1 === 'Card1_Inv'">
               4 (D&D)
@@ -430,35 +428,34 @@ import {// Componentes
     IonHeader, 
     IonPage, 
     IonTitle, 
-    IonToolbar,
-    IonChip,
-    // Cartas
+    IonFooter,
+    // Cards
     IonCard, 
     IonCardContent, 
     IonCardHeader, 
     IonCardSubtitle, 
     IonCardTitle,
-    // Avatar
-    IonAvatar,
-    // Footer
-    IonFooter,
-    // Button
-    IonButton, 
-    IonIcon,
     // Label
     IonLabel, 
-    IonSegment, 
-    IonSegmentButton,
-    // Grid
-    IonCol, 
-    IonGrid, 
-    IonRow,
+    IonSegment,
     // Acordion
     IonAccordion, 
     IonAccordionGroup, 
+    // Grid
+    IonCol,
+    IonRow, 
+    IonGrid, 
+    // Img
+    IonAvatar,
+    IonIcon,
     IonItem,
-    // Popover
-    IonPopover
+    // Button
+    IonButton,
+    IonSegmentButton,
+    //...
+    IonToolbar,
+    IonChip,
+    IonPopover 
     } from '@ionic/vue';
   import { // ...
     defineComponent,
@@ -475,14 +472,14 @@ import {// Componentes
 const buttonsCard1 = ref('Card1_Int');
 const buttonsCard2 = ref('Card2_Cur');
 
-// Text ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// Information |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const card1_Text = [
 // Card 1
   {id:1, // Default
     /* Card 1_ Introducción */
     // Frase, Nombre, Introducción
     frase:"...",
-    autor:"Name",
+    autor:"Name (year)",
     introduction:"...",
     // Wiki Imagenes
     // Wiki Text
@@ -496,8 +493,10 @@ const card1_Text = [
     especie: "Response",
     ocupation: "Response",
     procedencia: "Response",
-    familiares: "Response",
-    afiliados: "Response",
+    familiares: 
+      "Response",
+    afiliados: 
+      "Response",
     /* Card 1_ Historia 
       Como Interactuar: 
         - Salto de texto = "+"<br>"+"
@@ -535,7 +534,7 @@ const card1_Text = [
     /* Card 1_ Introducción */
     // Frase, Nombre, Introducción
     frase:"Y si debo dar esto por terminado, dejarlo por la paz o como sea, supongo que diré, que mi armadura, nunca fue una distracción, o un pasatiempo, era una capullo, y ahora, soy un hombre nuevo. Podrán arrebatarme mi casa, todos mis trucos y juguetes, pero hay algo que no pueden quitarme... yo soy Iron Man.",
-    autor:"Anthony Stark",
+    autor:"Anthony Stark (2013)",
     introduction:"...",
     // Wiki Imagenes
     // Wiki Text
@@ -549,8 +548,13 @@ const card1_Text = [
     especie: "Humano",
     ocupation: "Millonario, Filántropo, Superheroe",
     procedencia: "Estadounidense",
-    familiares: "Peper Potts (Esposa)"+"<br>"+" Morgan Stark (Hija)"+"<br>"+" Howard Stark (Padre-Fallecido)",
-    afiliados: "Peter Parker (Aprendiz)"+"<br>"+" J.A.R.V.I.S / Vision (Creación - Asistente virtual)",
+    familiares: 
+      "Peper Potts (Esposa)"+"<br>"+
+      "Morgan Stark (Hija)"+"<br>"+
+      "Howard Stark (Padre-Fallecido)",
+    afiliados: 
+      "Peter Parker (Aprendiz)"+"<br>"+
+      "J.A.R.V.I.S / Vision (Creación - Asistente virtual)",
     /* Card 1_ Historia 
       Como Interactuar: 
         - Salto de texto = "+"<br>"+"
@@ -594,22 +598,47 @@ const card1_Text = [
 ]
 
 // Change buttons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+/* Cambiar versión personaje */
+const versionsCount = card1_Text.length;
+const currentNumber = ref(1);
+const toggleChangeVersion = () => {
+  currentNumber.value = currentNumber.value % versionsCount + 1;
+};
+/* Cambiar al modo edición (Pendiente) */
 const editMode = ref(false);
 const toggleEditMode = () => {
   editMode.value = !editMode.value;
 };
-const versionsCount = card1_Text.length;
-const currentNumber = ref(1);
-const toggleChangeVersion = () => {
-  currentNumber.value = currentNumber.value % versionsCount + 1; 
-  // El valor despues del simbolo % deve ser alterado segúna la cantidad de entidades de card1_Text
-};
 </script>
 
 <style scoped>
-  .textBold{
+  .textBold {
     font-weight: bold
-  }
+    }
+  .statStyle {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .statStyleBorder{
+    border: 2px solid red;
+    padding: 5px;
+    }
+    .statStyleContent1{
+    text-align: center;
+    width: 70%;
+    margin: 0 15%;
+    }
+    .statStyleContent2{
+    text-align: center;
+    width: 70%;
+    margin: 15%;
+    }
+  .abilitieStyle{
+    width: 100%; 
+    margin: 0
+    }
   #container {
     text-align: center;
     position: absolute;
