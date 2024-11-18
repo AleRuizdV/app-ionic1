@@ -392,16 +392,17 @@
               1 (Text)
             </div><!-- =============================================================================== -->
             <!-- Galería--><div v-if="buttonsCard2 === 'Card2_Gal'">
-              <ion-row>
-                <ion-col>
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                </ion-col>
-                <ion-col>
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                </ion-col>
-              </ion-row>
+              <ion-grid>
+                <ion-row>
+                  <template v-for="image in card2_Img" :key="image.id">
+                    <ion-col :size="calculateCols">
+                      <div :href="image.link" style="position: relative;">
+                        <img :alt=image.title :src="image.link" style="max-width: 400px;"/>
+                      </div>
+                    </ion-col>
+                  </template>
+                </ion-row>
+              </ion-grid>
             </div><!-- =============================================================================== -->
             <!-- Updates--><div v-if="buttonsCard2 === 'Card2_Upd'">
               3 (Text)
@@ -596,6 +597,16 @@ const card1_Text = [
     /* Card 1_ Inventario */
   }
 ]
+const card2_Img = [
+  {id: 1 , title: 'Imagen 1',
+    link: 'https://ionicframework.com/docs/img/demos/card-media.png'},
+  {id: 2 , title: 'Imagen 2',
+    link: 'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987265163-9XILMVT3TK4HZ5X6538M/VH_01_1080pjpg.jpg'},
+  {id: 3 , title: 'Imagen 3',
+    link: 'https://ionicframework.com/docs/img/demos/card-media.png'},
+  {id: 4 , title: 'Imagen 4',
+    link: 'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987265163-9XILMVT3TK4HZ5X6538M/VH_01_1080pjpg.jpg'},
+]
 
 // Change buttons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 /* Cambiar versión personaje */
@@ -609,6 +620,28 @@ const editMode = ref(false);
 const toggleEditMode = () => {
   editMode.value = !editMode.value;
 };
+
+// ... |
+function calculateCols() {
+  const width = window.innerWidth;
+  if (width >= 1200) {
+    return 'col-12 xl:col-3'; // 3 columns for extra large screens
+  } else if (width >= 768) {
+    return 'col-12 lg:col-4'; // 4 columns for large screens
+  } else {
+    return 'col-12'; // 1 column for small screens
+  }
+}
+function calculateImages() {
+  const width = window.innerWidth;
+  if (width >= 1200) {
+    return 'col-12 xl:col-3'; // 3 columns for extra large screens
+  } else if (width >= 768) {
+    return 'col-12 lg:col-4'; // 4 columns for large screens
+  } else {
+    return 'col-12'; // 1 column for small screens
+  }
+}
 </script>
 
 <style scoped>
