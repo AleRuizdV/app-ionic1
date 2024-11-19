@@ -26,14 +26,13 @@
         </ion-toolbar>
       </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       
-      <!-- Grilla de Personajes --><ion-grid>
+      <!-- IA Grilla de Personajes --><ion-grid>
         <ion-row>
           <template v-for="card in cardData" :key="card.id">
             <ion-col :size="calculateCols">
               <!-- Personajes --><ion-card class="carta_personaje" :href="card.link" style="height: 350px; width: 14rem;">
-                <!-- Imagen Presentación PJ --><div style="position: relative;">
-                  <!-- Problema: "card.image" debe tener una imagen cuadrada (relasión 1:1) para que se vea consistente entre las imagenes -->
-                  <img :alt="card.title" :src="card.image" style="width: 100%;"/>
+                <!-- Imagen Presentación PJ --><div class="image-container">
+                  <img :alt="card.title" :src="card.image" />
                 </div>
                 <!-- Info Presentación PJ --><div class="card-content">
                   <ion-card-header>
@@ -142,6 +141,29 @@
     /* Fondo semitransparente para mejorar la legibilidad sobre la imagen */
     color: white;
     }
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.3rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+  }
+  .image-container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+  }
+  .image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  }
+
   #container {
     text-align: center;
     position: absolute;

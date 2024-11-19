@@ -89,11 +89,26 @@
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Imagenes principales -->
                     <!-- Agregar Label de Imagenes
-                    <ion-card-header>
-                      <ion-card-title>Labels</ion-card-title>
-                    </ion-card-header>
+                    <div>
+                      <ion-card-header>
+                        <ion-segment v-model="buttonsWikiImages" >
+                          <ion-segment-button value="Img1" >
+                            <ion-label>{{ wikiImgTitle[0] }}</ion-label>
+                          </ion-segment-button>
+                          <ion-segment-button value="Img2" >
+                            <ion-label>{{ wikiImgTitle[1] }}</ion-label>
+                          </ion-segment-button>
+                        </ion-segment>
+                      </ion-card-header>
+                    </div>
+                    <div v-if="buttonsCard1 === 'Img1'">
+                      <img :alt=card1_Text[currentNumber-1].wikiImgTitle[0] :src= card1_Text[currentNumber-1].wikiImages[0] />
+                    </div>
+                    <div v-if="buttonsCard1 === 'Img2'">
+                      <img alt=card1_Text[currentNumber-1].wikiImgTitle[1] :src= card1_Text[currentNumber-1].wikiImages[1] />
+                    </div>
                     -->
-                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                    <img :src=card1_Text[currentNumber-1].wikiImages[0] :alt=card1_Text[currentNumber-1].wikiImgTitle[0]>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombres y apodos -->
                     <ion-card-header><ion-card-title>Nombre</ion-card-title>
@@ -473,6 +488,8 @@ import {// Componentes
 const buttonsCard1 = ref('Card1_Int');
 const buttonsCard2 = ref('Card2_Cur');
 
+const buttonsWikiImages = ref('Img1');
+
 // Information |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const card1_Text = [
 // Card 1
@@ -483,6 +500,8 @@ const card1_Text = [
     autor:"Name (year)",
     introduction:"...",
     // Wiki Imagenes
+    wikiImgTitle:['Montañas'],
+    wikiImages:['https://ionicframework.com/docs/img/demos/card-media.png'],
     // Wiki Text
     nombreCorto: "Name",
     nombreCompleto: "Response",
@@ -538,6 +557,8 @@ const card1_Text = [
     autor:"Anthony Stark (2013)",
     introduction:"...",
     // Wiki Imagenes
+    wikiImgTitle:['Tony Stark'],
+    wikiImages:['https://www.latercera.com/resizer/v2/R25ZLWEPYREGVBGDY7OOUY32PQ.jpg?quality=80&smart=true&auth=d27f0d5c9cafb87b0067a7e6a37ca4c85d2966f4b3c5a659b137e070de25840f&width=690&height=502'], // ,'https://i.blogs.es/794234/vqstrq665vfavkvbmk6ptmd2nq/1366_2000.jpeg'
     // Wiki Text
     nombreCorto: "Tony Stark",
     nombreCompleto: "Anthony Edward Stark",
@@ -615,6 +636,10 @@ const currentNumber = ref(1);
 const toggleChangeVersion = () => {
   currentNumber.value = currentNumber.value % versionsCount + 1;
 };
+/* Cambiar versión Wiki 
+const versionsCountImages = card1_Text.wikiImages.length;
+const currentNumberWiki = ref(1);
+*/
 /* Cambiar al modo edición (Pendiente) */
 const editMode = ref(false);
 const toggleEditMode = () => {
