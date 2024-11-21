@@ -28,18 +28,18 @@
       
       <!-- IA Grilla de Personajes --><ion-grid>
         <ion-row>
-          <template v-for="card in cardData" :key="card.id">
+          <template v-for="pjData in personajeData" :key="pjData.id">
             <ion-col :size="calculateCols">
-              <!-- Personajes --><ion-card class="carta_personaje" :href="card.link" style="height: 350px; width: 14rem;">
+              <!-- Personajes --><ion-card class="carta_personaje" :href="pjData.link" style="height: 350px; width: 14rem;">
                 <!-- Imagen Presentación PJ --><div class="image-container">
-                  <img :alt="card.title" :src="card.image" />
+                  <img :alt="pjData.title" :src="pjData.image" />
                 </div>
                 <!-- Info Presentación PJ --><div class="card-content">
                   <ion-card-header>
-                    <ion-card-title style="font-weight: bold;">{{ card.title }}</ion-card-title>
-                    <ion-card-subtitle>{{ card.subtitle }}</ion-card-subtitle>
+                    <ion-card-title style="font-weight: bold;">{{ pjData.title }}</ion-card-title>
+                    <ion-card-subtitle>{{ pjData.subtitle }}</ion-card-subtitle>
                   </ion-card-header>
-                  <ion-card-content>{{ card.description }}</ion-card-content>
+                  <ion-card-content>{{ pjData.description }}</ion-card-content>
                 </div>
               </ion-card><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
             </ion-col>
@@ -97,7 +97,7 @@
     } from '@ionic/vue';
   import { home } from 'ionicons/icons';
 
-  const cardData = [
+  const personajeData = [
     {id: 1, title: 'Personaje 1',
       subtitle: 'Card Subtitle',
       description: "Here's a small text description for the card content.",

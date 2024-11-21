@@ -88,26 +88,37 @@
                     </ion-card-header>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Imagenes principales -->
-                    <div>
-                      <ion-card style="margin: 0;">
-                        <ion-card-header>
-                          {{ card1_Text[currentNumber-1].wikiImgTitle[0] }}
-                          <!-- Agregar Label de Imagenes -------------------------------------------------
-                          <ion-segment v-model="buttonsWikiImages" v-for="item of card1_Text[currentNumber-1].wikiImgTitle" :key="item.id">
-                            <ion-segment-button value="Img1">
-                              <ion-label>{{ card1_Text[currentNumber-1].wikiImgTitle[0] }}</ion-label>
-                            </ion-segment-button>
-                            <ion-segment-button value="Img1">
-                              <ion-label>{{ card1_Text[currentNumber-1].wikiImgTitle[1] }}</ion-label>
-                            </ion-segment-button>
-                          </ion-segment>
-                          -->
-                        </ion-card-header>
-                        <ion-card-content style="padding: 0;">
-                          <img :src=card1_Text[currentNumber-1].wikiImages[0] :alt=card1_Text[currentNumber-1].wikiImgTitle[0]>
-                        </ion-card-content>
-                      </ion-card>
-                    </div>
+                    <div><ion-card style="margin: 0;">
+                      <ion-card-header>
+                        {{ card1_Text[currentNumber-1].wiki_imagenes[0].title }}
+                        <!-- Agregar Label de Imagenes v1-------------------------------------------------
+                        <ion-segment v-model="buttonsWikiImages" v-for="item of card1_Text[currentNumber-1].wikiImgTitle" :key="item.id">
+                          <ion-segment-button value="Img1">
+                            <ion-label>{{ card1_Text[currentNumber-1].wikiImgTitle[0] }}</ion-label>
+                          </ion-segment-button>
+                          <ion-segment-button value="Img1">
+                            <ion-label>{{ card1_Text[currentNumber-1].wikiImgTitle[1] }}</ion-label>
+                          </ion-segment-button>
+                        </ion-segment>
+                        -->
+                        <!-- Agregar Label de Imagenes v2-------------------------------------------------
+                        <ion-segment v-for="{wiki, index} of card1_Text[currentNumber-1].wiki_imagenes">
+                          <ion-segment-button value={{ 'Img' + index }}>
+                            <ion-label>{{ wiki.title}}</ion-label>
+                          </ion-segment-button>
+                        </ion-segment> -->
+                        <!-- Agregar Label de Imagenes v3-------------------------------------------------
+                        <ion-segment v-for="{wiki, index} in card1_Text[currentNumber-1].wiki_imagenes" :key="wiki.index"> 
+                          <ion-segment-button>
+                            <ion-label>{{ wiki.title }}</ion-label>
+                          </ion-segment-button>
+                        </ion-segment>
+                        -->
+                      </ion-card-header>
+                      <ion-card-content style="padding: 0;">
+                        <img :src=card1_Text[currentNumber-1].wiki_imagenes[0].image :alt=card1_Text[currentNumber-1].wiki_imagenes[0].title>
+                      </ion-card-content>
+                    </ion-card></div>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombres y apodos -->
                     <ion-card-header><ion-card-title>Nombre</ion-card-title>
@@ -501,6 +512,16 @@ const card1_Text = [
     // Wiki Imagenes
     wikiImgTitle:['Montañas'],
     wikiImages:['https://ionicframework.com/docs/img/demos/card-media.png'],
+    wiki_imagenes: [
+      {
+        title: 'Montañas',
+        image: 'https://ionicframework.com/docs/img/demos/card-media.png'
+      },
+      {
+        title: 'Valles',
+        image: 'https://ionicframework.com/docs/img/demos/card-media.png'
+      },
+    ],
     // Wiki Text
     nombreCorto: "Name",
     nombreCompleto: "Response",
@@ -558,6 +579,16 @@ const card1_Text = [
     // Wiki Imagenes
     wikiImgTitle:['Tony Stark'],
     wikiImages:['https://www.latercera.com/resizer/v2/R25ZLWEPYREGVBGDY7OOUY32PQ.jpg?quality=80&smart=true&auth=d27f0d5c9cafb87b0067a7e6a37ca4c85d2966f4b3c5a659b137e070de25840f&width=690&height=502'], // ,'https://i.blogs.es/794234/vqstrq665vfavkvbmk6ptmd2nq/1366_2000.jpeg'
+    wiki_imagenes: [
+      {
+        title: 'Tony Stark',
+        image: 'https://www.latercera.com/resizer/v2/R25ZLWEPYREGVBGDY7OOUY32PQ.jpg?quality=80&smart=true&auth=d27f0d5c9cafb87b0067a7e6a37ca4c85d2966f4b3c5a659b137e070de25840f&width=690&height=502'
+      },
+      {
+        title: 'Iron Man',
+        image: 'https://i.blogs.es/794234/vqstrq665vfavkvbmk6ptmd2nq/1366_2000.jpeg'
+      },
+    ],
     // Wiki Text
     nombreCorto: "Tony Stark",
     nombreCompleto: "Anthony Edward Stark",
