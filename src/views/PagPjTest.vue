@@ -88,27 +88,26 @@
                     </ion-card-header>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Imagenes principales -->
-                    <!-- Agregar Label de Imagenes
                     <div>
-                      <ion-card-header>
-                        <ion-segment v-model="buttonsWikiImages" >
-                          <ion-segment-button value="Img1" >
-                            <ion-label>{{ wikiImgTitle[0] }}</ion-label>
-                          </ion-segment-button>
-                          <ion-segment-button value="Img2" >
-                            <ion-label>{{ wikiImgTitle[1] }}</ion-label>
-                          </ion-segment-button>
-                        </ion-segment>
-                      </ion-card-header>
+                      <ion-card style="margin: 0;">
+                        <ion-card-header>
+                          {{ card1_Text[currentNumber-1].wikiImgTitle[0] }}
+                          <!-- Agregar Label de Imagenes -------------------------------------------------
+                          <ion-segment v-model="buttonsWikiImages" v-for="item of card1_Text[currentNumber-1].wikiImgTitle" :key="item.id">
+                            <ion-segment-button value="Img1">
+                              <ion-label>{{ card1_Text[currentNumber-1].wikiImgTitle[0] }}</ion-label>
+                            </ion-segment-button>
+                            <ion-segment-button value="Img1">
+                              <ion-label>{{ card1_Text[currentNumber-1].wikiImgTitle[1] }}</ion-label>
+                            </ion-segment-button>
+                          </ion-segment>
+                          -->
+                        </ion-card-header>
+                        <ion-card-content style="padding: 0;">
+                          <img :src=card1_Text[currentNumber-1].wikiImages[0] :alt=card1_Text[currentNumber-1].wikiImgTitle[0]>
+                        </ion-card-content>
+                      </ion-card>
                     </div>
-                    <div v-if="buttonsCard1 === 'Img1'">
-                      <img :alt=card1_Text[currentNumber-1].wikiImgTitle[0] :src= card1_Text[currentNumber-1].wikiImages[0] />
-                    </div>
-                    <div v-if="buttonsCard1 === 'Img2'">
-                      <img alt=card1_Text[currentNumber-1].wikiImgTitle[1] :src= card1_Text[currentNumber-1].wikiImages[1] />
-                    </div>
-                    -->
-                    <img :src=card1_Text[currentNumber-1].wikiImages[0] :alt=card1_Text[currentNumber-1].wikiImgTitle[0]>
                     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
                     <!-- Wiki: Nombres y apodos -->
                     <ion-card-header><ion-card-title>Nombre</ion-card-title>
