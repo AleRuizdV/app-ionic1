@@ -500,15 +500,11 @@ const card1_Text = [
     autor:"Name (year)",
     introduction:"...",
     // Wiki Imagenes
-    wikiImgTitle:['Montañas'],
-    wikiImages:['https://ionicframework.com/docs/img/demos/card-media.png'],
     wiki_imagenes: [
-      {
-        title: 'Montañas',
+      {title: 'Montañas',
         image: 'https://ionicframework.com/docs/img/demos/card-media.png'
       },
-      {
-        title: 'Valles',
+      {title: 'Valles',
         image: 'https://ionicframework.com/docs/img/demos/card-media.png'
       },
     ],
@@ -567,15 +563,11 @@ const card1_Text = [
     autor:"Anthony Stark (2013)",
     introduction:"...",
     // Wiki Imagenes
-    wikiImgTitle:['Tony Stark'],
-    wikiImages:['https://www.latercera.com/resizer/v2/R25ZLWEPYREGVBGDY7OOUY32PQ.jpg?quality=80&smart=true&auth=d27f0d5c9cafb87b0067a7e6a37ca4c85d2966f4b3c5a659b137e070de25840f&width=690&height=502'], // ,'https://i.blogs.es/794234/vqstrq665vfavkvbmk6ptmd2nq/1366_2000.jpeg'
     wiki_imagenes: [
-      {
-        title: 'Tony Stark',
+      {title: 'Tony Stark',
         image: 'https://www.latercera.com/resizer/v2/R25ZLWEPYREGVBGDY7OOUY32PQ.jpg?quality=80&smart=true&auth=d27f0d5c9cafb87b0067a7e6a37ca4c85d2966f4b3c5a659b137e070de25840f&width=690&height=502'
       },
-      {
-        title: 'Iron Man',
+      {title: 'Iron Man',
         image: 'https://i.blogs.es/794234/vqstrq665vfavkvbmk6ptmd2nq/1366_2000.jpeg'
       },
     ],
