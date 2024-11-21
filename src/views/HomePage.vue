@@ -12,12 +12,6 @@
     </ion-header><!-- ................................................................................ -->
 
     <!-- Body --><ion-content :fullscreen="true">
-      <!-- ... --><ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-      
       <!-- Carta a Libreria --> <ion-card href="/storage">
         <img alt="Silhouette of mountains" src="https://images.ctfassets.net/0piqveu8x9oj/7xkbfuRW3hWVoneQ13sI94/f97f0e8982c6ef35a71eeeea42f9d6a1/Articles_Header_Image_w07_2.jpg" />
         <ion-card-header>

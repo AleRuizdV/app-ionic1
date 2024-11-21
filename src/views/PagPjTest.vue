@@ -24,11 +24,6 @@
     </ion-header><!-- ................................................................................ -->
 
     <!-- Body --><ion-content :fullscreen="true">
-      <!-- ... --><ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
       
       <!-- Configuración Personaje --><div class="ConfigPJ"> 
         <!-- Cambiar versión personaje --> <ion-button class="ion-text-wrap" style="max-width: 400px" @click="toggleChangeVersion">
@@ -78,16 +73,15 @@
                   <!-- Texto Introductorio --><ion-card-content>
                     <p v-html="card1_Text[currentNumber-1].introduction"></p>
                   </ion-card-content>
-                </ion-col>
-
+                </ion-col><!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
                 <!-- Columna 2: Wiki --><ion-col>
                   <ion-card>
-                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-                    <!-- Wiki: Nombre de Personaje -->
+                    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                    Wiki: Nombre de Personaje -->
                     <ion-card-header><ion-card-title>{{ card1_Text[currentNumber-1].nombreCorto }}</ion-card-title>
                     </ion-card-header>
-                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-                    <!-- Wiki: Imagenes principales -->
+                    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                    Wiki: Imagenes principales -->
                     <div><ion-card style="margin: 0;">
                       <ion-card-header>
                         {{ card1_Text[currentNumber-1].wiki_imagenes[0].title }}
@@ -119,8 +113,8 @@
                         <img :src=card1_Text[currentNumber-1].wiki_imagenes[0].image :alt=card1_Text[currentNumber-1].wiki_imagenes[0].title>
                       </ion-card-content>
                     </ion-card></div>
-                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-                    <!-- Wiki: Nombres y apodos -->
+                    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                    Wiki: Nombres y apodos -->
                     <ion-card-header><ion-card-title>Nombre</ion-card-title>
                     </ion-card-header>                    
                     <!-- Modify: Text --><ion-card-content>
@@ -133,8 +127,8 @@
                         <ion-col><p v-html="card1_Text[currentNumber-1].apodos"></p></ion-col>
                       </ion-row>
                     </ion-card-content>
-                    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-                    <!-- Wiki: Datos personales de Personaje -->
+                    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                    Wiki: Datos personales de Personaje -->
                     <ion-card-header><ion-card-title>Datos</ion-card-title>
                     </ion-card-header>
                     <!-- Modify: Text --><ion-card-content>
@@ -176,7 +170,7 @@
                       </ion-row>
                     </ion-card-content>
                   </ion-card>
-                </ion-col>
+                </ion-col><!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
               </ion-row>
               <!-- // Idea para Sumario del personaje
               <div> // Part 2.1: Index of Part 2.2
@@ -194,15 +188,13 @@
             </div><!-- =============================================================================== -->
             <!-- Historia--><div v-if="buttonsCard1 === 'Card1_His'">
               <p v-html="card1_Text[currentNumber-1].historia"></p>
-              <!-- {{ card1_Text[currentNumber-1].historia }} -->
             </div><!-- =============================================================================== -->
             <!-- Stats & Abilities--><div v-if="buttonsCard1 === 'Card1_Sta'">
               <!-- Stats --><ion-accordion-group>
                 <ion-accordion value="first">
                   <!-- Nombre lista --><ion-item slot="header">
                     <ion-card-title>Stats</ion-card-title>
-                  </ion-item>
-
+                  </ion-item><!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
                   <!-- Info Stats --><div class="ion-padding" slot="content">
                     <ion-card-content>
                       <!-- Str | Dex | Con --><ion-row>
@@ -217,7 +209,7 @@
                                 {{ card1_Text[currentNumber-1].stat_str2 }}</ion-card>
                             </ion-card>
                           </div>
-                        </ion-col>
+                        </ion-col><!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                         <!-- 2. Dex --><ion-col>
                           <div class="statStyle">
                             <ion-card class="statStyleBorder">
@@ -229,7 +221,7 @@
                                 {{ card1_Text[currentNumber-1].stat_dex2 }}</ion-card>
                             </ion-card>
                           </div>
-                        </ion-col>
+                        </ion-col><!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                         <!-- 3. Con --><ion-col>
                           <div class="statStyle">
                             <ion-card class="statStyleBorder">
@@ -241,8 +233,8 @@
                                 {{ card1_Text[currentNumber-1].stat_con2 }}</ion-card>
                             </ion-card>
                           </div>
-                        </ion-col>
-                      </ion-row>
+                        </ion-col><!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                      </ion-row><!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
                       <!-- Int | Wis | Cha --><ion-row>
                         <!-- 4. Int --><ion-col>
                           <div class="statStyle">
@@ -255,7 +247,7 @@
                                 {{ card1_Text[currentNumber-1].stat_int2 }}</ion-card>
                             </ion-card>
                           </div>
-                        </ion-col>
+                        </ion-col><!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                         <!-- 5. Wis --><ion-col>
                           <div class="statStyle">
                             <ion-card class="statStyleBorder">
@@ -267,7 +259,7 @@
                                 {{ card1_Text[currentNumber-1].stat_wis2 }}</ion-card>
                             </ion-card>
                           </div>
-                        </ion-col>
+                        </ion-col><!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
                         <!-- 6. Cha --><ion-col>
                           <div class="statStyle">
                             <ion-card class="statStyleBorder">
@@ -279,11 +271,10 @@
                                 {{ card1_Text[currentNumber-1].stat_cha2 }}</ion-card>
                             </ion-card>
                           </div>
-                        </ion-col>
-                      </ion-row>
+                        </ion-col><!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+                      </ion-row><!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
                     </ion-card-content>
-                  </div>
-                  
+                  </div><!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
                 </ion-accordion>
               </ion-accordion-group>
               <!-- Abilities --><ion-accordion-group>
@@ -395,8 +386,7 @@
               4 (D&D)
             </div><!-- =============================================================================== -->
           </ion-card-content>
-        </ion-card>
-        <!-- _________________________________________________________________________________________ -->
+        </ion-card><!-- ______________________________________________________________________________ -->
         <!-- Card 2 --><ion-card class="carta_Stay">
           <!-- Segments-buttons for change content --><ion-card-header>
             <ion-segment v-model="buttonsCard2">
@@ -433,7 +423,7 @@
               3 (Text)
             </div><!-- =============================================================================== -->
           </ion-card-content>
-        </ion-card>
+        </ion-card><!-- ______________________________________________________________________________ -->
       </div><!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
     </ion-content><!-- ............................................................................... -->
     

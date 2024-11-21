@@ -7,11 +7,6 @@
     </ion-header><!-- ................................................................................ -->
 
     <!-- Body --><ion-content :fullscreen="true">
-      <!-- ... --><ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
       <!-- Carta Log In --><ion-card>
         <!-- Titulo --><ion-card-header>

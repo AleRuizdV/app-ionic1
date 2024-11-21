@@ -20,12 +20,6 @@
     </ion-header><!-- ................................................................................ -->
 
     <!-- Body --><ion-content :fullscreen="true">
-      <!-- ... --><ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header><!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-      
       <!-- IA Grilla de Personajes --><ion-grid>
         <ion-row>
           <template v-for="pjData in personajeData" :key="pjData.id">
