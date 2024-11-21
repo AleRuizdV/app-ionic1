@@ -78,13 +78,20 @@
                   <ion-card>
                     <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     Wiki: Nombre de Personaje -->
-                    <ion-card-header><ion-card-title>{{ card1_Text[currentNumber-1].nombreCorto }}</ion-card-title>
-                    </ion-card-header>
+                    <ion-card-header><ion-card-title>{{ card1_Text[currentNumber-1].nombreCorto }}</ion-card-title></ion-card-header>
                     <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     Wiki: Imagenes principales -->
-                    <div><ion-card style="margin: 0;">
-                      <ion-card-header>
-                        {{ card1_Text[currentNumber-1].wiki_imagenes[0].title }}
+                    <ion-card style="margin: 0;">
+                      <ion-card-header style="padding: 0; background-color: rgb(86, 48, 97);">
+                        <ion-segment>
+                          <ion-segment-button>
+                            {{ card1_Text[currentNumber-1].wiki_imagenes[0].title }}
+                          </ion-segment-button>
+                          <ion-segment-button>
+                            {{ card1_Text[currentNumber-1].wiki_imagenes[1].title }}
+                          </ion-segment-button>
+                        </ion-segment>
+                        
                         <!-- Agregar Label de Imagenes v1-------------------------------------------------
                         <ion-segment v-model="buttonsWikiImages" v-for="item of card1_Text[currentNumber-1].wikiImgTitle" :key="item.id">
                           <ion-segment-button value="Img1">
@@ -112,7 +119,7 @@
                       <ion-card-content style="padding: 0;">
                         <img :src=card1_Text[currentNumber-1].wiki_imagenes[0].image :alt=card1_Text[currentNumber-1].wiki_imagenes[0].title>
                       </ion-card-content>
-                    </ion-card></div>
+                    </ion-card>
                     <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     Wiki: Nombres y apodos -->
                     <ion-card-header><ion-card-title>Nombre</ion-card-title>
