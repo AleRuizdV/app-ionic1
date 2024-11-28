@@ -481,7 +481,8 @@ import {// Componentes
     } from '@ionic/vue';
   import { // ...
     defineComponent,
-    ref 
+    ref,
+    onMounted 
     } from 'vue';
   import { // Iconos
     arrowUp,
@@ -489,6 +490,29 @@ import {// Componentes
     home, 
     film 
     } from 'ionicons/icons';
+  import { CapacitorSQLite } from '@capacitor-community/sqlite';
+  import { createDatabase } from '../services/databaseService';
+
+// ... ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+const info_text = ref([]);
+
+onMounted(async () => {
+  await createDatabase();
+  await fetchInfo_text();
+  });
+
+async function fetchInfo_text() {
+  const db = await CapacitorSQLite.createConnection(
+    'myDb',
+    false,
+    'no-encryption',
+    1
+  );
+  await db.open();
+  const res = await db.query('SELECT * FROM info_text;');
+  info_text.value = res.values;
+  await CapacitorSQLite.closeConnection('myDb');
+}
 
 // Labels cards ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 const buttonsCard1 = ref('Card1_Int');
