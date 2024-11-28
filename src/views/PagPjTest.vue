@@ -91,7 +91,6 @@
                             {{ card1_Text[currentNumber-1].wiki_imagenes[1].title }}
                           </ion-segment-button>
                         </ion-segment>
-                        
                         <!-- Agregar Label de Imagenes v1-------------------------------------------------
                         <ion-segment v-model="buttonsWikiImages" v-for="item of card1_Text[currentNumber-1].wikiImgTitle" :key="item.id">
                           <ion-segment-button value="Img1">
