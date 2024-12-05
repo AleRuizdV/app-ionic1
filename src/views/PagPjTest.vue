@@ -500,7 +500,6 @@ onMounted(async () => {
   await createDatabase();
   await fetchInfo_text();
   });
-
 async function fetchInfo_text() {
   const db = await CapacitorSQLite.createConnection(
     'myDb',
