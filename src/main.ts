@@ -34,7 +34,11 @@ import '@ionic/vue/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 
-/* ... */
+/* 
+* Intento de conexión con Firebase 
+* -----------------------------------------------------
+* Intento de conexión no estable, esta es una versión anterior donde el proyecto se sigue visualizando, y funcionando a su capacidad basica.
+*/
 import { Capacitor } from '@capacitor/core';
 import { SQLiteConnection } from '@capacitor-community/sqlite';
 const sqlite = new SQLiteConnection(Capacitor.getPlatform());

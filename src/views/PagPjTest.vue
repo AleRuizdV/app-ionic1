@@ -670,6 +670,17 @@ const card2_Img = [
     link: 'https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987265163-9XILMVT3TK4HZ5X6538M/VH_01_1080pjpg.jpg'},
 ]
 
+/* Intento de conexión con Firebase ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+* -----------------------------------------------------
+* Intento de conexión no estable, esta es una versión anterior donde el proyecto se sigue visualizando, y funcionando a su capacidad basica.
+* -----------------------------------------------------
+* La prueba intento ser en esta pagina web para ver la reacción en el codigo antes de integrar al resto de la pagina, ocupando el siguiente video de referencia: https://www.youtube.com/watch?v=w0Q1z-MIIVQ+
+* Aprendi como crear y tener el firebase, pero a la hora de implementarlo, solo salia la pagina en negro. Aclaro que trate y que no cumpli con la expectativas de crear la conexión.
+* Gracias por la ayuda de igual manera, profesor.
+
+* P.S.: No me rendire con este proyecto.
+*/
+
 // Change buttons ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 /* Cambiar versión personaje */
 const versionsCount = card1_Text.length;
